@@ -16,7 +16,7 @@
             <nav id="main_menu" class="mobile_menu navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="mobile_menu_title" style="display:none;">MENU</li>
-                    <<li>
+                    <li>
                         <a href="/">HOME</a>
                         </li>
                         <li>
