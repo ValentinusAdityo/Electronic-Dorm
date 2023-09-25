@@ -1,5 +1,5 @@
 <!-- =========== PAGE TITLE ========== -->
-<div class="page_title gradient_overlay" style="background: url(images/page_title_bg.jpg);">
+<div class="page_title " style="background: url(images/page_title_bg.jpg);">
     <div class="container">
         <div class="inner">
             <div class="row">
