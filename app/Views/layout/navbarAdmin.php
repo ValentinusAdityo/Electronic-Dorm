@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     <li class="menu_button">
-                        <a href="/logout" class="button btn_yellow">Sign Out</a>
+                        <a href="/logout" class="button btn_blue">Sign Out</a>
                     </li>
                 </ul>
             </nav>
