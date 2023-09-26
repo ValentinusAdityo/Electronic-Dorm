@@ -12,7 +12,7 @@ class Pelanggan extends Migration
         $this->forge->addField([
             'nama'       => ['type' => 'varchar', 'constraint' => 255],
             'alamat'        => ['type' => 'text'],
-            'no_hp'      => ['type' => 'int', 'constraint' => 15],
+            'no_hp'      => ['type' => 'bigInt'],
             'email'       => ['type' => 'varchar', 'constraint' => 255],
             'password'    => ['type' => 'varchar', 'constraint' => 255],
             'created_at' => ['type' => 'datetime', 'null' => true],

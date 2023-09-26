@@ -11,7 +11,7 @@ class Admin extends Migration
         $this->forge->addField('id');
         $this->forge->addField([
             'nama'       => ['type' => 'varchar', 'constraint' => 255],
-            'no_hp'      => ['type' => 'int', 'constraint' => 15],
+            'no_hp'      => ['type' => 'bigInt'],
             'password'    => ['type' => 'varchar', 'constraint' => 255],
             'created_at' => ['type' => 'datetime', 'null' => true],
             'updated_at' => ['type' => 'datetime', 'null' => true],
