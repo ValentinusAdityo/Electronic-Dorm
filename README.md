@@ -1,9 +1,25 @@
 # Command Silahkan dipakai
+Saat pertama kali download langsung pakai
 ```
-- composer dump-autoload
-- php spark serve (aktifkan server)
-- php spark migrate (memasukan table ke database, sebelumnya dibuat dulu untuk database "ekost" di phpmyadmin)
-- php spark migrate:rollback (menghapus semua table dalam database)
-- php spark migrate:refresh (menghapus lalu memasukan lagi table database semuanya lagi ke database)
-- php spark db:seed (nama seeder, Kalau mau semua seeder langsung ambil DbSeeder) 
+composer dump-autoload
+```
+Untuk aktifkan server Code igniter
+```
+php spark serve
+```
+Memasukan table ke database, sebelumnya perlu dibuat terlebih dahulu untuk database "ekot" di phpmyadmin
+```
+php spark migrate
+```
+Menghapus semua table dalam database
+```
+php spark migrate:rollback
+```
+Menghapus lalu memasukan lagi table database semuanya lagi ke dalam database
+```
+php spark migrate:refresh
+```
+Untuk memasukan random data record ke dalam <nama table>, kalau ingin semua table terisi gunakan seeder bernama "DbSeeder"
+```
+php spark db:seed <nama seeder>
 ```
