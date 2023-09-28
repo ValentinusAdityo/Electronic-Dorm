@@ -78,7 +78,7 @@
                 <a class="tp-caption button btn_blue" href="/register" data-x="center" data-hoffset="0" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>REGISTERS
                 </a>
                 <!-- LAYER NR. 9 -->
-                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;"><img src="images/logo.svg" width="200" alt="Image">
+                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;"><img src="images/logo_new2.png" width="200" alt="Image">
                 </div>
             </li>
 
@@ -119,8 +119,8 @@
                         <div class="main_title mt_wave a_left">
                             <h2>TENTANG EUFORIAHOME</h2>
                         </div>
-                        <p class="main_description  text-justify">Kost "EuphoriaHome" adalah tempat tinggal eksklusif yang menawarkan pengalaman hunian yang luar biasa. Dengan desain modern dan fasilitas berkualitas, EuphoriaHome memadukan kenyamanan, gaya hidup mewah, dan kesenangan dalam satu tempat.</p>
-                        <p class="text-justify"> Di EuphoriaHome, Anda akan menemukan kamar-kamar yang dirancang dengan sempurna untuk memberikan ruang pribadi yang nyaman. Setiap kamar dilengkapi dengan furnitur berkualitas tinggi, tempat tidur yang nyaman, meja kerja, dan area penyimpanan yang luas. Desain interior yang elegan menciptakan suasana yang menyenangkan dan menenangkan bagi para penghuni.</p>
+                        <p class="main_description  text-justify">Kost "DreamKost" adalah tempat tinggal eksklusif yang menawarkan pengalaman hunian yang luar biasa. Dengan desain modern dan fasilitas berkualitas, DreamKost memadukan kenyamanan, gaya hidup mewah, dan kesenangan dalam satu tempat.</p>
+                        <p class="text-justify"> Di DreamKost, Anda akan menemukan kamar-kamar yang dirancang dengan sempurna untuk memberikan ruang pribadi yang nyaman. Setiap kamar dilengkapi dengan furnitur berkualitas tinggi, tempat tidur yang nyaman, meja kerja, dan area penyimpanan yang luas. Desain interior yang elegan menciptakan suasana yang menyenangkan dan menenangkan bagi para penghuni.</p>
                     </div>
                 </div>
 
