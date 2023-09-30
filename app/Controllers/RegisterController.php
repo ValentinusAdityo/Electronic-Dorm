@@ -14,9 +14,6 @@ class RegisterController extends BaseController
             . view('layout/navbarGuest') . view('register/register') . view('layout/footer');
     }
 
-    public function registery(){
-        
-    }
 
     public function logout()
     {

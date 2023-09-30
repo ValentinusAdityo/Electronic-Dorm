@@ -18,15 +18,15 @@
                 <div class="col-md-3 col-sm-6 widget">
                     <div class="about">
                         <a href="/"><img class="logo" src="images/logo_light.svg" height="32" alt="Logo"></a>
-                        <p class="text-justify">EuforiaHome adalah salah satu gedung kost murah di Yogyakarta yang berlokasi di Jalan Perumnas, Cadong catur, Depok, Sleman dimana merupakan kawasan bisnis dan kuliner terkemuka di Yogyakarta. Dengan jarak tempuh sekitar 10 menit menuju area Kampus, Perkantoran dan Mall ternama di Yogyakarta, menjadikan EuforiaHome Perumnas sebagai sebuah pilihan yang sangat tepat bagi para mahasiswa maupun profesional muda yang mencari tempat hunian yang berkelas dan strategis</p>
+                        <p class="text-justify">DreamKost adalah salah satu gedung kost murah di Yogyakarta yang berlokasi di Jalan Perumnas, Cadong catur, Depok, Sleman dimana merupakan kawasan bisnis dan kuliner terkemuka di Yogyakarta. Dengan jarak tempuh sekitar 10 menit menuju area Kampus, Perkantoran dan Mall ternama di Yogyakarta, menjadikan DreamKost Perumnas sebagai sebuah pilihan yang sangat tepat bagi para mahasiswa maupun profesional muda yang mencari tempat hunian yang berkelas dan strategis</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 widget">
                     <h5>Latest News</h5>
                     <ul class="blog_posts">
-                        <li><a href="#">EuforiaHome Discount NewYearSale <small>DEC 31, 2022</small></li>
-                        <li><a href="#">EuforiaHome in pictures</a> <small>AUGUST 16, 2023</small></li>
-                        <li><a href="#">EuforiaHome family party</a> <small>SEPTEMBER 15, 2023</small></li>
+                        <li><a href="#">DreamKost Discount NewYearSale <small>DEC 31, 2022</small></li>
+                        <li><a href="#">DreamKost in pictures</a> <small>AUGUST 16, 2023</small></li>
+                        <li><a href="#">DreamKost family party</a> <small>SEPTEMBER 15, 2023</small></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 widget">
@@ -45,7 +45,7 @@
                             <li><i class="glyphicon glyphicon-map-marker"></i> Jl. Perumnas, Ngropoh, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</li>
                             <li><i class="glyphicon glyphicon-phone-alt"></i> Phone: 081234567890 </li>
                             <li><i class="fa fa-fax"></i> Fax: 089876543210</li>
-                            <li><i class="fa fa-envelope"></i> Email: <a href="mailto:info@site.com">EuforiaHome@gmail.com</a></li>
+                            <li><i class="fa fa-envelope"></i> Email: <a href="mailto:info@site.com">DreamKost@gmail.com</a></li>
                         </ul>
                     </address>
                 </div>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="copyrights">
-                        Copyright 2021 <a href="/">EUFORIAHOME</a> All Rights Reserved.
+                        Copyright 2021 <a href="/">DreamKost</a> All Rights Reserved.
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
