@@ -2,9 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\AdminModel;
-use App\Models\PelangganModel;
-
+use App\Models\Admin;
+use App\Models\Pelanggan;
 
 class LoginController extends BaseController
 {
@@ -14,15 +13,40 @@ class LoginController extends BaseController
         return view('login/login');
     }
 
-
     public function check()
     {
         $data = ['title' => 'EuforiaHome'];
 
-        $username = $this->request->getPost('usr');
+        /** @var string */
+        $user = $this->request->getPost('usr');
         $password = $this->request->getPost('pwd');
 
-        $adminModel = new AdminModel();
+        if (preg_match('/^[0-9]+$/', $user)) {
+            $adminModel = (new Admin(null, $user, $password))->getAdminData();
+            $pelangganModel = (new Pelanggan(null, $user, null, $password, null))->getPenggunaData();
+        } else if (filter_var($user, FILTER_VALIDATE_EMAIL)) {
+            $pelangganModel = (new Pelanggan(null, null, $user, $password, null))->getPenggunaData();
+        } else if (preg_match('/^[a-zA-Z\s]+$/', $user)) {
+            $adminModel = (new Admin($user, null, $password))->getAdminData();
+            $pelangganModel = (new Pelanggan($user, null, null, $password, null))->getPenggunaData();
+        }
+
+        if ($adminModel) {
+            $session = session();
+            $session->set('admin', $adminModel['nama']);
+            $session->set('is_admin', true);
+            return redirect()->to('/');
+        }
+
+        if ($pelangganModel) {
+            $session = session();
+            $session->set('user', $pelangganModel['nama']);
+            $session->set('is_admin', false);
+            return redirect()->to('/');
+        } else {
+            return view('login/login');
+        }
+        /*        $adminModel = new AdminModel();
         $pelangganModel = new PelangganModel();
 
         // Check if login credentials belong to an admin
@@ -51,21 +75,16 @@ class LoginController extends BaseController
             return redirect()->to('/');
         } else {
             return view('login/login');
-        }
+        }*/
     }
-
-
-
 
     public function logout()
     {
         $session = session();
-        if ($session->get('is_admin')) {
-            $session->remove('admin');
-            return view('login/login');
-        } else {
-            $session->remove('user');
-            return view('login/login');
-        }
+        $session->remove('admin');
+        $session->remove('user');
+        $session->set('is_admin', false);
+
+        return view('login/login');
     }
 }

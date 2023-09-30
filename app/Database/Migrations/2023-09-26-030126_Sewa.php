@@ -18,6 +18,7 @@ class Sewa extends Migration
             'id_admin' => ['type' => 'int', 'constraint' => 9],
             'created_at' => ['type' => 'datetime', 'null' => true],
             'updated_at' => ['type' => 'datetime', 'null' => true],
+            'deleted_at' => ['type' => 'datetime', 'null' => true],
         ]);
         
         $this->forge->addKey('id', true);

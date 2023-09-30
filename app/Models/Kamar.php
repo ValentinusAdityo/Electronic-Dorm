@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Sewa extends Model
+class Kamar extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'sewa';
+    protected $table            = 'kamar';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['biaya', 'tanggal_awal', 'masa_berlaku'];
+    protected $allowedFields    = ['nama', 'fasilitas', 'harga', 'deskripsi', 'status', 'gambar'];
 
     // Dates
     protected $useTimestamps = false;

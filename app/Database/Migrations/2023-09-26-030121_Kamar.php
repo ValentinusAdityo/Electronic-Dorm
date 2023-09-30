@@ -18,6 +18,7 @@ class Kamar extends Migration
             'gambar' => ['type' => 'varchar', 'constraint' => 255],
             'created_at' => ['type' => 'datetime', 'null' => true],
             'updated_at' => ['type' => 'datetime', 'null' => true],
+            'deleted_at' => ['type' => 'datetime', 'null' => true],
         ]);
         
         $this->forge->addKey('id', true);
