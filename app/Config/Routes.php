@@ -44,6 +44,7 @@ use App\Controllers\DataTagihan;
 $routes->match(['get', 'post'], '/', [Home::class, 'index']);
 $routes->match(['get', 'post'], '/login', [LoginController::class, 'index']);
 $routes->match(['get', 'post'], '/register', [RegisterController::class, 'index']);
+$routes->match(['get', 'post'], '/register/input', [RegisterController::class, 'input']);
 $routes->match(['get', 'post'], '/about', [Home::class, 'about']);
 $routes->match(['get', 'post'], '/login/check', [LoginController::class, 'check']);
 $routes->match(['get', 'post'], '/logout', [LoginController::class, 'logout']);

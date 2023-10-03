@@ -31,17 +31,17 @@
                         </div>
                         <!-- ========== BOOKING FORM ========== -->
                         <div class="row">
-                            <form id="booking_form_advanced">
+                            <form action="/register/input" method="post">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input name="email" type="text" class="form-control" placeholder="Email">
+                                        <input name="email" type="email" class="form-control" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Nama</label>
-                                        <input class="form-control" name="nama" type="email" placeholder="Nama">
+                                        <input class="form-control" name="nama" type="text" placeholder="Nama">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -53,7 +53,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>No Handphone</label>
-                                        <input name="no_hp" type="text" class="form-control" placeholder="No Handphone">
+                                        <input name="no_hp" type="tel" class="form-control" placeholder="No Handphone">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit" class="button btn_blue pull-right"> <i class="fa fa-calendar-check-o" aria-hidden="true"></i> Register </button>
+                                    <input type="submit" value="Register" class="button btn_blue pull-right">
                                 </div>
                             </form>
                         </div>
