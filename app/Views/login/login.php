@@ -25,7 +25,7 @@
         body {
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(to right, #DD58D6, #9336B4);
+            background: linear-gradient(to right, #b2aabe, #bd996c);
         }
 
         .login {
@@ -98,14 +98,14 @@
         }
 
         .main-login h1 {
-            color: #55be9b;
+            color: #070708;
         }
 
         .put {
             max-width: 300px;
             width: 60%;
             height: 40px;
-            color: #c0c0c0;
+            color: #070708;
             background-color: rgb(234, 234, 234);
             outline: none;
             border-radius: 3px;
@@ -178,7 +178,7 @@
             color: aliceblue;
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
-            background-color: #DD58D6;
+            background-color: #15a2e8;
             /* background-color: rgb(255, 189, 127); */
         }
 
@@ -218,42 +218,6 @@
         .contain {
             z-index: 100 !important;
             position: absolute;
-        }
-
-        .google {
-            display: flex;
-            margin: 0 auto;
-            margin-top: 20px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .facebook {
-            display: flex;
-            margin: 0 auto;
-            margin-top: 20px;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            background-color: #1778F2;
-        }
-
-        .logo2 {
-            width: 40px;
-            height: 100%;
-            background-image: url("https://github.com/ixl-math/imgs/blob/main/facebook-7-512%20(2).png?raw=true");
-            background-size: 18px;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .logo {
-            width: 40px;
-            height: 100%;
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png");
-            background-size: 18px;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         .main-btn {
@@ -336,11 +300,6 @@
                     <p style="color: #a5a5a5;" class="p-b">or</p>
                     <div style="background-color: #a5a5a5;" class="line"></div>
                 </div>
-                <button style="border: 2px solid;" id="btn" class="sub pic facebook" type="submit">
-                    <div class="logo2"></div>Sign in with Facebook
-                </button>
-                <button style="border: 2px solid;" id="btn" class="sub pic google" type="submit">
-                    <div class="logo"></div>Sign in with Google
                 </button>
         </div>
         </form>
