@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/logo.svg" height="32" alt="Logo" />
+                    <img src="images/logo_new3_crop.png" height="32" alt="Logo" />
                 </a>
             </div>
             <nav id="main_menu" class="mobile_menu navbar-collapse">
