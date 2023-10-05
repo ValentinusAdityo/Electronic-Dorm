@@ -26,17 +26,4 @@ class RegisterController extends BaseController
         $pelangganModel = (new Pelanggan($nama, $no_hp, $email, $password, $alamat))->setPenggunaData();
         return redirect()->to('/login');
     }
-
-
-    public function logout()
-    {
-        $session = session();
-        if ($session->get('is_admin')) {
-            $session->remove('admin');
-            return view('login/login');
-        } else {
-            $session->remove('user');
-            return view('login/login');
-        }
-    }
 }

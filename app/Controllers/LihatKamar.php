@@ -2,15 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Models\Kamar;
+
 class LihatKamar extends BaseController
 {
     public function showAll()
     {
         $session = session();
-
+        $kamarModel = (new Kamar())->getAllKamarData();
         $model = model(KamarModel::class);
         $data = [
-            'list' => $model->getKamar(),
+            'list' => $kamarModel,
             'title' => 'EuforiaHome - Rooms List View'
         ];
         if ($session->has('admin')) {

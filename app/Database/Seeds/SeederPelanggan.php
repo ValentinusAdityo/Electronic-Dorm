@@ -15,7 +15,7 @@ class SeederPelanggan extends Seeder
                 'alamat' => $faker->address,
                 'no_hp' => $faker->numberBetween($min = 620000000000, $max = 629999999999),
                 'email' => $faker->email,
-                'password' => $faker->password
+                'password' => $faker->regexify('[0-9][A-Z][a-z]{8}')
             ];
             $this->db->table('pelanggan')->insert($data);
         }

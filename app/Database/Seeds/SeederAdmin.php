@@ -13,7 +13,7 @@ class SeederAdmin extends Seeder
             $data = [
                 'nama' => $faker->name, 
                 'no_hp' => $faker->numberBetween($min = 620000000000, $max = 629999999999),
-                'password' => $faker->password
+                'password' => $faker->regexify('[0-9][A-Z][a-z]{8}')
             ];
             $this->db->table('admin')->insert($data);
         }
