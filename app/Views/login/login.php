@@ -25,7 +25,7 @@
         body {
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(to right, #b2aabe, #bd996c);
+            background : #90b4ce ;
         }
 
         .login {
@@ -146,7 +146,7 @@
         }
 
         .main-login input::placeholder {
-            color: #55be9b8f;
+            color: #094067;
         }
 
         .pass {
@@ -178,7 +178,7 @@
             color: aliceblue;
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
-            background-color: #15a2e8;
+            background-color: #3da9fc;
             /* background-color: rgb(255, 189, 127); */
         }
 
@@ -233,7 +233,7 @@
         }
 
         .main-btn:hover {
-            background-color: #9336B4;
+            background-color: #dac0a3;
         }
 
         .top {
@@ -268,7 +268,7 @@
             height: 200px;
             z-index: 1;
             border-top-left-radius: 100%;
-            background-color: #9336B4;
+            background-color: #3f4c52;
         }
 
         .blob:nth-child(2) {
@@ -278,8 +278,9 @@
             height: 100px;
             z-index: 1;
             border-bottom-right-radius: 100%;
-            background-color: #9336B4;
+            background-color: #094067;
         }
+        
     </style>
 </head>
 
