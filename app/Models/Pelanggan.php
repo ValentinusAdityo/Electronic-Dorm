@@ -4,6 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 use CodeIgniter\Database\RawSql;
+use CodeIgniter\Session\SessionInterface;
 
 class Pelanggan extends Model
 {
@@ -29,7 +30,9 @@ class Pelanggan extends Model
         'alamat' => 'permit_empty',
         'no_hp' => 'permit_empty|numeric|max_length[15]|min_length[10]',
         'email' => 'permit_empty|valid_email|max_length[255]',
-        'password' => 'required|max_length[16]|alpha_numeric_space|min_length[8]'
+        'password' => 'required|max_length[16]|alpha_numeric_space|min_length[8]',
+        'created_at' => 'required|valid_date',
+        'updated_at' => 'required|valid_date'
     ];
     protected $validationMessages   = [];
     protected $skipValidation       = false;
@@ -69,6 +72,7 @@ class Pelanggan extends Model
             'email' => $this->email,
             'password' => $this->password,
             'alamat' => $this->alamat,
+            'updated_at' => date('Y-m-d H:i:s')
         ];
 
         $validation->setRules($this->validationRules);
@@ -99,19 +103,38 @@ class Pelanggan extends Model
 
         $result = $query->get();
 
-        if ($result->getNumRows() > 0) {
-            return $result->getRowArray();
-        } else {
-            return null;
-        }
+        return ($result->getNumRows() > 0) ? $result->getRowArray() : null;
     }
 
     public function setPenggunaData()
     {
+        $this->data['created_at'] = date('Y-m-d H:i:s');
         try {
             $this->db->table($this->table)->insert($this->data);
-        } finally {
+            return true;
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    public function updatePenggunaData(SessionInterface $session)
+    {
+        try {
+            $this->db->table($this->table)->update($session->get('id'), $this->data);
+            $updatedData = $this->db->table($this->table)->where($session->get('id'))->get()->getRow();
+            return $updatedData;
+        } catch (\Exception $e) {
             return null;
+        }
+    }
+
+    public function deletePenggunaData(SessionInterface $session)
+    {
+        try {
+            $this->db->table($this->table)->delete($session->get('id'));
+            return true;
+        } catch (\Exception $e) {
+            return false;
         }
     }
 }

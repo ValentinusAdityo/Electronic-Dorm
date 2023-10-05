@@ -32,50 +32,28 @@ class LoginController extends BaseController
         }
 
         if ($adminModel) {
+            $dataAdmin = [
+                'id' => $adminModel['id'],
+                'admin' => $adminModel['nama'],
+                'is_admin' => true
+            ];
             $session = session();
-            $session->set('admin', $adminModel['nama']);
-            $session->set('is_admin', true);
+            $session->set($dataAdmin);
             return redirect()->to('/');
         }
 
         if ($pelangganModel) {
+            $dataUser = [
+                'id' => $pelangganModel['id'],
+                'user' => $pelangganModel['nama'],
+                'is_admin' => false
+            ];
             $session = session();
-            $session->set('user', $pelangganModel['nama']);
-            $session->set('is_admin', false);
+            $session->set($dataUser);
             return redirect()->to('/');
         } else {
             return view('login/login');
         }
-        /*        $adminModel = new AdminModel();
-        $pelangganModel = new PelangganModel();
-
-        // Check if login credentials belong to an admin
-        $admin = $adminModel->where('admin_id', $username)
-            ->where('password', $password)
-            ->first();
-
-        // Check if login credentials belong to a pelanggan
-        $pelanggan = $pelangganModel->where('pelanggan_id', $username)
-            ->where('password', $password)
-            ->first();
-
-        if ($admin) {
-            // Login as admin
-            $session = session();
-            $session->set('admin', $username);
-            $session->set('is_admin', true);
-
-            return redirect()->to('/');
-        } elseif ($pelanggan) {
-            // Login as pelanggan
-            $session = session();
-            $session->set('user', $username);
-            $session->set('is_admin', false);
-
-            return redirect()->to('/');
-        } else {
-            return view('login/login');
-        }*/
     }
 
     public function logout()

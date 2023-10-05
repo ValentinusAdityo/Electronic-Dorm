@@ -922,8 +922,8 @@ button {
     color: #000000;
 }
 .button.btn_yellow {
-    background: #deb666;
-    border-color: #deb666;
+    background: #10d410;
+    border-color: #10d410;
     color: #fff;
 }
 
@@ -949,8 +949,8 @@ button {
 .button.btn_blue:hover,
 .button.btn_blue:active,
 .button.btn_blue:focus {
-    background: #b69854;
-    border-color: #b69854;
+    background: #28e9c1;
+    border-color: #28e9c1;
 }
 
 .button.btn_yellow:hover,

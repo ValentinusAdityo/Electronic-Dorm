@@ -21,9 +21,9 @@
                 <!-- MAIN IMAGE -->
                 <img src="images/slider/slider-1.jpg" alt="Image" title="slider_bg2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
-                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;"> WELCOME TO EUFORIAHOME </div>
+                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;"> WELCOME TO DREAMKOST </div>
                 <!-- LAYER NR. 2 -->
-                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Life Balance in Perfection</div>
+                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Live a Life Like Your Dream</div>
                 <!-- LAYER NR. 3 -->
                 <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" data-x="center" data-hoffset="-170" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 7;background: url(images/icons/wave_white.svg);">
                 </div>
@@ -36,8 +36,6 @@
                 <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="170" data-y="418" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" style="z-index: 7;background: url(images/icons/wave_white.svg);">
                 </div>
                 <!-- LAYER NR. 7 -->
-                <a class="tp-caption button btn_blue" href="/register" data-x="center" data-hoffset="0" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>REGISTERS
-                </a>
                 <!-- LAYER NR. 8 -->
                 <div class="tp-caption tp_m_title tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-fontsize="['18','18','16','16']" data-lineheight="['18','18','16','16']" data-whitespace="nowrap" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                     <i class="fa fa-star-o"></i>
@@ -74,9 +72,6 @@
                 <!-- LAYER NR. 6 -->
                 <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="134" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" data-responsive_offset="on" style="z-index: 10;background: url(images/icons/wave_white.svg);">
                 </div>
-                <!-- LAYER NR. 7 -->
-                <a class="tp-caption button btn_blue" href="/register" data-x="center" data-hoffset="0" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>REGISTERS
-                </a>
                 <!-- LAYER NR. 9 -->
                 <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;"><img src="images/logo_new3.png" alt="Image">
                 </div>
@@ -117,7 +112,7 @@
                 <div class="col-md-4">
                     <div id="about">
                         <div class="main_title mt_wave a_left">
-                            <h2>TENTANG EUFORIAHOME</h2>
+                            <h2>TENTANG DREAMKOST</h2>
                         </div>
                         <p class="main_description  text-justify">Kost "DreamKost" adalah tempat tinggal eksklusif yang menawarkan pengalaman hunian yang luar biasa. Dengan desain modern dan fasilitas berkualitas, DreamKost memadukan kenyamanan, gaya hidup mewah, dan kesenangan dalam satu tempat.</p>
                         <p class="text-justify"> Di DreamKost, Anda akan menemukan kamar-kamar yang dirancang dengan sempurna untuk memberikan ruang pribadi yang nyaman. Setiap kamar dilengkapi dengan furnitur berkualitas tinggi, tempat tidur yang nyaman, meja kerja, dan area penyimpanan yang luas. Desain interior yang elegan menciptakan suasana yang menyenangkan dan menenangkan bagi para penghuni.</p>
@@ -190,7 +185,7 @@
     <section id="gallery" class="blue_bg">
         <div class="container">
             <div class="main_title mt_wave mt_white a_center">
-                <h2>EUFORIAHOME GALLERY PHOTOS</h2>
+                <h2>DREAMKOST GALLERY PHOTOS</h2>
             </div>
             <p class="main_description md_white a_center">Ini merupakan beberapa foto dari fasilitas yang kami tawarkan dari kost kami</p>
         </div>
@@ -265,7 +260,7 @@
             <div class="main_title mt_wave a_center">
                 <h2>WHAT PEOPLE SAY ABOUT US</h2>
             </div>
-            <p class="main_description a_center">"Kost "EuforiaHome" adalah surga bagi para pencari tempat tinggal yang tak terlupakan! Dengan sentuhan elegan dan fasilitas mewah, Kost ini berhasil menciptakan pengalaman tinggal yang tak tertandingi. Begitu saya melangkah ke dalam, saya disambut oleh lingkungan yang modern, bersih, dan terawat dengan sempurna. Kamar-kamar yang dilengkapi dengan perabotan yang modern dan desain yang estetis memberikan kenyamanan sejati</p>
+            <p class="main_description a_center">"Kost "DREAMKOST" adalah surga bagi para pencari tempat tinggal yang tak terlupakan! Dengan sentuhan elegan dan fasilitas mewah, Kost ini berhasil menciptakan pengalaman tinggal yang tak tertandingi. Begitu saya melangkah ke dalam, saya disambut oleh lingkungan yang modern, bersih, dan terawat dengan sempurna. Kamar-kamar yang dilengkapi dengan perabotan yang modern dan desain yang estetis memberikan kenyamanan sejati</p>
             <div class="row">
                 <!-- ITEM -->
                 <div class="col-md-4">
@@ -280,7 +275,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
                             <p>
-                                Saya dengan sepenuh hati merekomendasikan Kost "EuforiaHome" kepada siapa pun yang mencari tempat tinggal yang menakjubkan. Dari lingkungan yang menyegarkan hingga fasilitas yang mewah, Kost ini memberikan pengalaman tak terlupakan. Kebersihan yang tiada tanding dan pemeliharaan yang luar biasa menjadikan tempat ini nyaman dan menenangkan. Sistem keamanan yang canggih memberikan rasa aman dan ketenangan. Fasilitas yang lengkap, seperti AC modern, tempat tidur yang nyaman</p>
+                                Saya dengan sepenuh hati merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang menakjubkan. Dari lingkungan yang menyegarkan hingga fasilitas yang mewah, Kost ini memberikan pengalaman tak terlupakan. Kebersihan yang tiada tanding dan pemeliharaan yang luar biasa menjadikan tempat ini nyaman dan menenangkan. Sistem keamanan yang canggih memberikan rasa aman dan ketenangan. Fasilitas yang lengkap, seperti AC modern, tempat tidur yang nyaman</p>
                         </div>
                         <div class="review_author">
                             <img src="images/Hizkia.png" alt="Image">
@@ -303,7 +298,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                            <p>Saya dengan tulus merekomendasikan Kost "EuforiaHome" kepada siapa pun yang mencari tempat tinggal yang nyaman, aman, dan dilengkapi dengan fasilitas yang luar biasa. Suasana lingkungannya yang bersih dan terawat dengan baik menciptakan kenyamanan yang tak tertandingi, sementara sistem keamanan yang canggih memberikan rasa aman yang tak tergoyahkan. Kost "EuforiaHome" menyediakan fasilitas lengkap, seperti AC yang menyegarkan, tempat tidur yang nyaman</p>
+                            <p>Saya dengan tulus merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang nyaman, aman, dan dilengkapi dengan fasilitas yang luar biasa. Suasana lingkungannya yang bersih dan terawat dengan baik menciptakan kenyamanan yang tak tertandingi, sementara sistem keamanan yang canggih memberikan rasa aman yang tak tergoyahkan. Kost "DREAMKOST" menyediakan fasilitas lengkap, seperti AC yang menyegarkan, tempat tidur yang nyaman</p>
                         </div>
                         <div class="review_author">
                             <img src="images/Geri.png" alt="Image">
@@ -326,7 +321,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                            <p>Saya dengan senang hati merekomendasikan Kost "EuforiaHome" kepada siapa pun yang mencari tempat tinggal yang luar biasa. Kost ini menawarkan lingkungan yang bersih, nyaman, dan terawat dengan baik. Fasilitas lengkap seperti AC, tempat tidur yang nyaman, dan dapur lengkap memenuhi kebutuhan sehari-hari. Pelayanan yang baik dari manajemen dan staf yang responsif menjadi nilai tambah. Terletak strategis, Kost "EuforiaHome" memberikan kemudahan akses ke berbagai fasilitas umum.</p>
+                            <p>Saya dengan senang hati merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang luar biasa. Kost ini menawarkan lingkungan yang bersih, nyaman, dan terawat dengan baik. Fasilitas lengkap seperti AC, tempat tidur yang nyaman, dan dapur lengkap memenuhi kebutuhan sehari-hari. Pelayanan yang baik dari manajemen dan staf yang responsif menjadi nilai tambah. Terletak strategis, Kost "DREAMKOST" memberikan kemudahan akses ke berbagai fasilitas umum.</p>
                         </div>
                         <div class="review_author">
                             <img src="images/Teddy.png" alt="Image">
