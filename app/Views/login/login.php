@@ -228,12 +228,13 @@
             cursor: pointer;
             border-radius: 50px;
             border: 2px solid aliceblue;
-           
+            background-color : #90b4ce;
             transition: .4s;
         }
 
         .main-btn:hover {
-            background-color: #90b4ce;
+          
+            background-color: #3da9fc;
         }
 
         .top {
@@ -257,7 +258,7 @@
         }
 
         .top button:hover {
-            border-bottom: 3px solid #9336B4;
+            border-bottom: 3px solid #094067;
         }
 
         .blob:nth-child(1) {
@@ -286,6 +287,7 @@
   /* Anda juga dapat menambahkan properti lain sesuai kebutuhan */
 }
 #btn:hover {
+            
             background-color: #094067;
         }
         
@@ -308,8 +310,9 @@
                     <div style="background-color: #a5a5a5;" class="line"></div>
                     <p style="color: #a5a5a5;" class="p-b">or</p>
                     <div style="background-color: #a5a5a5;" class="line"></div>
+                    
                 </div>
-                </button>
+                <button class="main-btn"> <a href="/register">Sign Up today</a> </button>
         </div>
         </form>
         <div class="banner">
@@ -317,14 +320,10 @@
             <div class="blob"></div>
             <div class="contain">
                 <h1>Selamat Datang Sobat Euphoria!</h1>
+                
                 <h4>We are happy to have you back, please sign back in to continue</h4>
-                <div class="lines">
-                    <div class="line"></div>
-                    <p class="p-b">or</p>
-                    <div class="line"></div>
-                </div>
-                <p class="pp">Dont have an account don't worry</p>
-                <button class="main-btn"> <a href="/register">Sign Up today</a> </button>
+            
+                
             </div>
         </div>
     </main>
