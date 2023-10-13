@@ -11,8 +11,10 @@ if($_POST)
     $site_title          = "Hotel Zante";
     $site_url            = "https://eagle-themes.com/zantehotel";
     $facebook_link       = "https://www.facebook.com/eaglethemescom"; 
-    $twitter_link        = "https://twitter.com/"; 
+    $twitter_link        = "https://twitter.com/";
     $admin_phone         = "18881234567";
+
+    
 
     // Email Settings
     $admin_email         = "noreply@eagle-themes.com";

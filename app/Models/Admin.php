@@ -81,7 +81,6 @@ class Admin extends Model
 
     public function getAdminData()
     {
-
         $query = $this->db->table($this->table)
             ->where('password', $this->password);
 

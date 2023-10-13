@@ -297,7 +297,7 @@ p {
 }
 
 .dropcap.yellow:first-letter {
-    color: #deb666;
+    color: #90b4ce;
 }
 
 .dropcap.dark:first-letter {
@@ -576,7 +576,7 @@ blockquote .quote_text {
 }
 
 .hover_effect.h_yellow:hover {
-    background: #deb666;
+    background: #90b4ce;
 }
 
 .hover_effect.h_dark:hover {
@@ -912,8 +912,8 @@ button {
 }
 
 .button.btn_blue {
-    background: #3a93f9;
-    border-color: #0008ff;
+    background: #3da9fc;
+    border-color: #094067;
     color: #fff;
 }
 .button.btn_grey {
@@ -922,14 +922,14 @@ button {
     color: #000000;
 }
 .button.btn_yellow {
-    background: #10d410;
-    border-color: #10d410;
+    background: #3da9fc;
+    border-color: #094067;
     color: #fff;
 }
 
 .button.btn_gold {
-    background: #c7ba88;
-    border-color: #c7ba88;
+    background: #3da9fc;
+    border-color: #094067;
     color: #fff;
 }
 
@@ -949,22 +949,22 @@ button {
 .button.btn_blue:hover,
 .button.btn_blue:active,
 .button.btn_blue:focus {
-    background: #28e9c1;
-    border-color: #28e9c1;
+    background: #094067;
+    border-color: #90b4ce;
 }
 
 .button.btn_yellow:hover,
 .button.btn_yellow:active,
 .button.btn_yellow:focus {
-    background: #b69854;
-    border-color: #b69854;
+    background: #094067;
+    border-color: #90b4ce;
 }
 
 .button.btn_gold:hover,
 .button.btn_gold:active,
 .button.btn_gold:focus {
-    background: #bcb081;
-    border-color: #bcb081;
+    background: #094067;
+    border-color: #90b4ce;
 }
 
 .button.btn_dark:hover,
@@ -1004,7 +1004,7 @@ button {
     text-transform: uppercase;
     padding: 21px 40px;
     padding: 21px 40px;
-    background: #ddbf5e;
+    background: #90b4ce;
     color: #ffffff;
     letter-spacing: 1px;
     border: none;
@@ -1165,7 +1165,7 @@ button {
 }
 
 .main_title.mt_yellow h2 {
-    color: #deb666;
+    color: #90b4ce;
 }
 
 .main_title.mt_white h2 {
@@ -2048,7 +2048,7 @@ header .navbar-header .mobile_menu_btn.active .icon-bar:nth-of-type(3) {
 #main_menu .navbar-nav .open .dropdown-toggle,
 .transparent.nav_bg #main_menu .navbar-nav li a:hover,
 .transparent.nav_bg #main_menu .navbar-nav .open .dropdown-toggle {
-    color: #deb666;
+    color: #094067;
 }
 
 #main_menu .navbar-nav .menu_button .button {
@@ -2060,8 +2060,8 @@ header .navbar-header .mobile_menu_btn.active .icon-bar:nth-of-type(3) {
 #main_menu .navbar-nav .menu_button .button:hover,
 #main_menu .navbar-nav .menu_button .button:focus,
 #main_menu .navbar-nav .menu_button .button:active {
-    background: #b69854;
-    border-color: #b69854;
+    background: #094067;
+    border-color: #094067;
     color: #fff !important;
 }
 
@@ -3744,7 +3744,7 @@ footer.dark .subfooter .social_media a {
 .sidebar .widget .search button {
     background: none;
     border: none;
-    color: #deb666;
+    color: #094067;
     float: left;
     right: 0;
     font-size: 14px;
@@ -3756,7 +3756,7 @@ footer.dark .subfooter .social_media a {
 }
 
 .sidebar .widget .search button:after {
-    background: #deb666;
+    background: #094067;
     content: "";
     height: 50%;
     left: 0;
