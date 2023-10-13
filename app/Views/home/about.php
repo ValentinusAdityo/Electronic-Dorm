@@ -1,5 +1,5 @@
 <!-- =========== PAGE TITLE ========== -->
-<div class="page_title" style="background: linear-gradient(45deg, rgba(38,98,85, 1),
+<div class="page_title" style="background:  linear-gradient(45deg, rgba(38,98,85, 1),
               rgba(38,98,85, 1)), url(images/page_title_bg.jpg);">
     <div class="container">
         <div class="inner">

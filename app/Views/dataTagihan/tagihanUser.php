@@ -1,5 +1,6 @@
 <!-- =========== PAGE TITLE ========== -->
-<div class="page_title gradient_overlay" style="background: url(images/page_title_bg.jpg)">
+<div class="page_title" style="background: linear-gradient(45deg, rgba(38,98,85, 1),
+              rgba(38,98,85, 1)), url(images/page_title_bg.jpg)">
     <div class="container">
         <div class="inner">
             <div class="row">
@@ -54,7 +55,7 @@
         </table>
         <br>
         <div class="text-right">
-        <a href="/payment" class="button  btn_blue btn_full upper">Bayar Sekarang</a>
+            <a href="/payment" class="button  btn_blue btn_full upper">Bayar Sekarang</a>
         </div>
     </div>
     </div>
