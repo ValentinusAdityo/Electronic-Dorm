@@ -63,9 +63,17 @@ class Admin extends Model
 
         $validation->setRules($this->validationRules);
 
-        if (!$validation->run($data)) {
-            return $validation->getErrors();
+        try {
+            if (!$validation->run($data)) {
+                return $validation->getErrors();
+            }
+        }catch(\Exception $e){
+            return "Something Wrong happen";
+        } finally {
+            $db = \Config\Database::connect();
+            parent::__construct($db);
         }
+        
 
         $db = \Config\Database::connect();
         parent::__construct($db);

@@ -21,6 +21,8 @@ class LoginController extends BaseController
         $user = $this->request->getPost('usr');
         $password = $this->request->getPost('pwd');
 
+        $adminModel = null;
+
         if (preg_match('/^[0-9]+$/', $user)) {
             $adminModel = (new Admin(null, $user, $password))->getAdminData();
             $pelangganModel = (new Pelanggan(null, $user, null, $password, null))->getPenggunaData();

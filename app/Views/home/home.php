@@ -278,10 +278,10 @@
                                 Saya dengan sepenuh hati merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang menakjubkan. Dari lingkungan yang menyegarkan hingga fasilitas yang mewah, Kost ini memberikan pengalaman tak terlupakan. Kebersihan yang tiada tanding dan pemeliharaan yang luar biasa menjadikan tempat ini nyaman dan menenangkan. Sistem keamanan yang canggih memberikan rasa aman dan ketenangan. Fasilitas yang lengkap, seperti AC modern, tempat tidur yang nyaman</p>
                         </div>
                         <div class="review_author">
-                            <img src="images/Hizkia.png" alt="Image">
+                            <img src="images/oreo.jpg" alt="Image">
                             <div class="author_info">
-                                <h5>Hizkia</h5>
-                                <span class="place">Perumnas, Yogyakarta</span>
+                                <h5>Andro</h5>
+                                <span class="place">Blok M, Jakarta Selatan</span>
                             </div>
                         </div>
                     </div>

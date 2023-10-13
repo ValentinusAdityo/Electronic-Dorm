@@ -77,7 +77,7 @@ class Pelanggan extends Model
         $validation->setRules($this->validationRules);
 
         if (!$validation->run($this->data)) {
-            return $validation->getErrors();
+            return $this->validation->getErrors();
         }
 
         $db = \Config\Database::connect();
