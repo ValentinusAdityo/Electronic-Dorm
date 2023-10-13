@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-use CodeIgniter\Database\RawSql;
 use CodeIgniter\Session\SessionInterface;
 
 class Pelanggan extends Model
@@ -31,7 +30,7 @@ class Pelanggan extends Model
         'no_hp' => 'permit_empty|numeric|max_length[15]|min_length[10]',
         'email' => 'permit_empty|valid_email|max_length[255]',
         'password' => 'required|max_length[16]|alpha_numeric_space|min_length[8]',
-        'created_at' => 'required|valid_date',
+        'created_at' => 'permit_empty|valid_date',
         'updated_at' => 'required|valid_date'
     ];
     protected $validationMessages   = [];
@@ -54,7 +53,7 @@ class Pelanggan extends Model
     private $email;
     private $password;
     private $alamat;
-    private $data;
+    private $data = [];
 
     public function __construct($nama, $no_hp, $email, $password, $alamat)
     {
@@ -68,17 +67,17 @@ class Pelanggan extends Model
 
         $this->data = [
             'nama' => $this->nama,
+            'alamat' => $this->alamat,
             'no_hp' => $this->no_hp,
             'email' => $this->email,
             'password' => $this->password,
-            'alamat' => $this->alamat,
             'updated_at' => date('Y-m-d H:i:s')
         ];
 
         $validation->setRules($this->validationRules);
 
         if (!$validation->run($this->data)) {
-            return $this->validation->getErrors();
+            return $validation->getErrors();
         }
 
         $db = \Config\Database::connect();
@@ -87,7 +86,8 @@ class Pelanggan extends Model
 
     public function getPenggunaData()
     {
-        $query = $this->db->table($this->table)->where('password', $this->password);
+        $query = $this->db->table($this->table)
+            ->where('password', $this->password);
 
         if ($this->nama !== null) {
             $query->where('nama', $this->nama);

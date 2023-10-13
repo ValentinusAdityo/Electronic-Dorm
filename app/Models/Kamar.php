@@ -24,9 +24,9 @@ class Kamar extends Model
     // Validation
     protected $validationRules      = [
         'fasilitas' => 'permit_empty',
-        'harga' => 'permit_empty',
-        'deskripsi' => 'permit_empty',
-        'status' => 'permit_empty',
+        'harga' => 'required|numeric',
+        'deskripsi' => 'required|alpha_space',
+        'status' => 'required|in_list[0,1]',
         'gambar' => 'permit_empty',
     ];
     protected $validationMessages   = [];
@@ -70,16 +70,13 @@ class Kamar extends Model
 
         $validation->setRules($this->validationRules);
 
-        try {
-            if (!$validation->run($data)) {
-                return $validation->getErrors();
-            }
-        }catch(\Exception $e){
-            return "Something Wrong happen";
-        } finally {
-            $db = \Config\Database::connect();
-            parent::__construct($db);
+
+        if (!$validation->run($data)) {
+            return $validation->getErrors();
         }
+
+        $db = \Config\Database::connect();
+        parent::__construct($db);
     }
 
     public function getAllKamarData()
@@ -101,13 +98,28 @@ class Kamar extends Model
 
     public function setKamarData()
     {
+        try {
+            $query = $this->db->table($this->table);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     public function updateKamarData()
     {
+        try {
+            //code...
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     public function deleteKamarData()
     {
+        try {
+            //code...
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 }
