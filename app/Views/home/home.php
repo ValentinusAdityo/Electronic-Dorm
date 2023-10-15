@@ -325,7 +325,7 @@
                             <p>Saya dengan senang hati merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang luar biasa. Kost ini menawarkan lingkungan yang bersih, nyaman, dan terawat dengan baik. Fasilitas lengkap seperti AC, tempat tidur yang nyaman, dan dapur lengkap memenuhi kebutuhan sehari-hari. Pelayanan yang baik dari manajemen dan staf yang responsif menjadi nilai tambah. Terletak strategis, Kost "DREAMKOST" memberikan kemudahan akses ke berbagai fasilitas umum.</p>
                         </div>
                         <div class="review_author">
-                            <img src="images/" alt="Image">
+                            <img src="images/adit.jpg" alt="Image">
                             <div class="author_info">
                                 <h5>Adit</h5>
                                 <span class="place">Perumnas, Yogyakarta</span>
