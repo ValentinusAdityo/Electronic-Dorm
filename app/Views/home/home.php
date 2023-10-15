@@ -301,14 +301,15 @@
                             <p>Saya dengan tulus merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang nyaman, aman, dan dilengkapi dengan fasilitas yang luar biasa. Suasana lingkungannya yang bersih dan terawat dengan baik menciptakan kenyamanan yang tak tertandingi, sementara sistem keamanan yang canggih memberikan rasa aman yang tak tergoyahkan. Kost "DREAMKOST" menyediakan fasilitas lengkap, seperti AC yang menyegarkan, tempat tidur yang nyaman</p>
                         </div>
                         <div class="review_author">
-                            <img src="images/Geri.png" alt="Image">
+                            <img src="images/herald.jpg" alt="Image">
                             <div class="author_info">
-                                <h5>Geri</h5>
-                                <span class="place">Perumnas, Yogyakarta</span>
+                                <h5>Herald</h5>
+                                <span class="place">Medan, Sumatra Utara</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- ITEM -->
                 <div class="col-md-4">
                     <div class="review_item">
@@ -324,17 +325,46 @@
                             <p>Saya dengan senang hati merekomendasikan Kost "DREAMKOST" kepada siapa pun yang mencari tempat tinggal yang luar biasa. Kost ini menawarkan lingkungan yang bersih, nyaman, dan terawat dengan baik. Fasilitas lengkap seperti AC, tempat tidur yang nyaman, dan dapur lengkap memenuhi kebutuhan sehari-hari. Pelayanan yang baik dari manajemen dan staf yang responsif menjadi nilai tambah. Terletak strategis, Kost "DREAMKOST" memberikan kemudahan akses ke berbagai fasilitas umum.</p>
                         </div>
                         <div class="review_author">
-                            <img src="images/Teddy.png" alt="Image">
+                            <img src="images/" alt="Image">
                             <div class="author_info">
-                                <h5>Teddy</h5>
+                                <h5>Adit</h5>
                                 <span class="place">Perumnas, Yogyakarta</span>
                             </div>
                         </div>
                     </div>
+              </div>
+              </div>
+              
+               <!-- ITEM -->  
+                            
+                <div class="col-md-4">
+                    <div class="review_item">
+                        <div class="review_content">
+                            <h3>Comfortable! </h3>
+                            <div class="review_rating">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <p>Kost-kostan dengan lokasi strategis dengan kampus & mudah dijangkau, suasana homey, tata ruang kamar & dekorasi serta perabotannya yang fungsional & simple. Kost "DreamKost" dengan harga terjangkau.Nyaman banget untuk kos anak kuliah atau kerja. Kalo malam sangat sunyi & adem jadi cocok untuk cari tempat tinggal yang peaceful. Petugasnya sangat fast respons dan ramah.</p>
+                        </div>
+                        <div class="review_author">
+                            <img src="images/natan.jpg" alt="Image">
+                            <div class="author_info">
+                                <h5>Nataneal</h5>
+                                <span class="place">Perumas, Yogyakarta</span>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                
+        
         </div>
 </div>
+
 </section>
 
 

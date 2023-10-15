@@ -27,16 +27,16 @@
                     <div class="details">
                         <h2><a href="blog-post.html">Tentang Kami </a></h2>
                         <div class="info">
-                            <span class="meta_part"><a href="#"><i class="fa fa-user"></i>Richardo Teddy </a></span>
-                            <span class="meta_part"><a href="#"><i class="fa fa-calendar"></i>June 25, 2023</a></span>
-                            <span class="meta_part"><a href="#"><i class="fa fa-comment-o"></i>68 Comments</a></span>
+                            <span class="meta_part"><a href="#"><i class="fa fa-user"></i>Valentinus Adit </a></span>
+                            <span class="meta_part"><a href="#"><i class="fa fa-calendar"></i>OKT 25, 2023</a></span>
+                            <span class="meta_part"><a href="#"><i class="fa fa-comment-o"></i>89 Comments</a></span>
                             <span class="meta_part"><i class="fa fa-folder-open-o"></i><a href="#">News</a>, <a href="#">Events</a></span>
                         </div>
-                        <p>Selamat datang di EuforiaHome!
+                        <p>Selamat datang di DreamKost!
 
-                            Kami di EuforiaHome berkomitmen untuk menciptakan pengalaman hunian yang tak terlupakan bagi setiap pelanggan kami. Sebagai perusahaan desain interior dan kontraktor rumah yang inovatif, kami memahami betapa pentingnya rumah yang nyaman dan estetis bagi kehidupan sehari-hari Anda.
+                            Kami di DreamKost berkomitmen untuk menciptakan pengalaman hunian yang tak terlupakan bagi setiap pelanggan kami. Sebagai perusahaan desain interior dan kontraktor rumah yang inovatif, kami memahami betapa pentingnya rumah yang nyaman dan estetis bagi kehidupan sehari-hari Anda.
                         </p>
-                        EuforiaHome didirikan dengan tujuan untuk mengubah rumah biasa menjadi ruang yang menginspirasi, memadukan gaya dan fungsi dengan harmonis. Dengan keahlian kami dalam desain interior dan pengetahuan mendalam tentang industri konstruksi, kami siap membantu Anda mewujudkan visi hunian impian Anda.
+                        DreamKost didirikan dengan tujuan untuk mengubah rumah biasa menjadi ruang yang menginspirasi, memadukan gaya dan fungsi dengan harmonis. Dengan keahlian kami dalam desain interior dan pengetahuan mendalam tentang industri konstruksi, kami siap membantu Anda mewujudkan visi hunian impian Anda.
                         </p>
                         Tim kami terdiri dari para ahli desain interior yang berbakat dan berpengalaman serta tukang yang terampil dan berdedikasi. Kami percaya bahwa kolaborasi yang erat dengan pelanggan adalah kunci kesuksesan. Kami akan mendengarkan kebutuhan, preferensi, dan inspirasi Anda dengan seksama untuk menciptakan desain yang sesuai dengan kepribadian dan gaya hidup Anda.
                         </p>
@@ -44,13 +44,13 @@
                         </p>
                         Kepuasan pelanggan adalah prioritas utama kami. Kami berkomitmen untuk memberikan layanan yang personal, transparan, dan mengutamakan kualitas. Setiap proyek kami dijalankan dengan ketelitian dan dedikasi yang tinggi, untuk memastikan bahwa hasil akhirnya melebihi harapan Anda.
                         </p>
-                        Apapun kebutuhan desain dan konstruksi Anda, EuforiaHome siap menjadi mitra terpercaya Anda. Kami berdedikasi untuk memberikan pengalaman yang tak terlupakan dan menciptakan ruang yang memenuhi hasrat estetika Anda. Mari bersama-sama mewujudkan hunian yang indah dan menginspirasi!
+                        Apapun kebutuhan desain dan konstruksi Anda, DreamKost siap menjadi mitra terpercaya Anda. Kami berdedikasi untuk memberikan pengalaman yang tak terlupakan dan menciptakan ruang yang memenuhi hasrat estetika Anda. Mari bersama-sama mewujudkan hunian yang indah dan menginspirasi!
                         </p>
-                        Terima kasih telah memilih EuforiaHome.
+                        Terima kasih telah memilih DreamKost.
                         </p>
                         Salam,
                         </p>
-                        Tim EuforiaHome</p>
+                        Tim DreamKost</p>
                     </div>
                 </article>
             </div>
