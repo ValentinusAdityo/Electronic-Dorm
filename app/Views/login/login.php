@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
-    <link rel="icon" href="images/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/logo_dreambiru.png" />
+    <link rel="icon" href="images/logo_dreambiru.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
         body {
             width: 100vw;
             height: 100vh;
-            background : #90b4ce ;
+            background: #90b4ce;
         }
 
         .login {
@@ -228,12 +228,12 @@
             cursor: pointer;
             border-radius: 50px;
             border: 2px solid aliceblue;
-            background-color : #90b4ce;
+            background-color: #90b4ce;
             transition: .4s;
         }
 
         .main-btn:hover {
-          
+
             background-color: #3da9fc;
         }
 
@@ -281,16 +281,19 @@
             border-bottom-right-radius: 100%;
             background-color: #094067;
         }
+
         #btn {
-  background-color: #3da9fc; /* Mengubah warna latar belakang tombol menjadi biru */
-  color: white; /* Mengubah warna teks tombol menjadi putih */
-  /* Anda juga dapat menambahkan properti lain sesuai kebutuhan */
-}
-#btn:hover {
-            
+            background-color: #3da9fc;
+            /* Mengubah warna latar belakang tombol menjadi biru */
+            color: white;
+            /* Mengubah warna teks tombol menjadi putih */
+            /* Anda juga dapat menambahkan properti lain sesuai kebutuhan */
+        }
+
+        #btn:hover {
+
             background-color: #094067;
         }
-        
     </style>
 </head>
 
@@ -310,7 +313,7 @@
                     <div style="background-color: #a5a5a5;" class="line"></div>
                     <p style="color: #a5a5a5;" class="p-b">or</p>
                     <div style="background-color: #a5a5a5;" class="line"></div>
-                    
+
                 </div>
                 <button class="main-btn"> <a href="/register">Sign Up today</a> </button>
         </div>
@@ -320,10 +323,10 @@
             <div class="blob"></div>
             <div class="contain">
                 <h1>Selamat Datang Sobat Euphoria!</h1>
-                
+
                 <h4>We are happy to have you back, please sign back in to continue</h4>
-            
-                
+
+
             </div>
         </div>
     </main>

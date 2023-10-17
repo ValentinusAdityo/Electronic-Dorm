@@ -57,9 +57,7 @@
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','25']" data-lineheight="['60','50','40','25']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">
                 </div>
-                <!-- LAYER NR. 2 -->
-                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="12" data-lineheight="12" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Private Space for Your Freedom
-                </div>
+
                 <!-- LAYER NR. 3 -->
                 <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-134" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2000" data-responsive_offset="on" style="z-index: 7;background: url(images/icons/wave_white.svg);">
                 </div>
@@ -73,7 +71,7 @@
                 <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="134" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" data-responsive_offset="on" style="z-index: 10;background: url(images/icons/wave_white.svg);">
                 </div>
                 <!-- LAYER NR. 9 -->
-                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;"><img src="images/logo_new3.png" alt="Image">
+                <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;"><img src="images/logo_Kostdream_crop.png" alt="Image">
                 </div>
             </li>
 
@@ -332,36 +330,36 @@
                             </div>
                         </div>
                     </div>
-              </div>
-              </div>
-              
-               <!-- ITEM -->  
-                            
-                <div class="col-md-4">
-                    <div class="review_item">
-                        <div class="review_content">
-                            <h3>Comfortable! </h3>
-                            <div class="review_rating">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <p>Kost-kostan dengan lokasi strategis dengan kampus & mudah dijangkau, suasana homey, tata ruang kamar & dekorasi serta perabotannya yang fungsional & simple. Kost "DreamKost" dengan harga terjangkau.Nyaman banget untuk kos anak kuliah atau kerja. Kalo malam sangat sunyi & adem jadi cocok untuk cari tempat tinggal yang peaceful. Petugasnya sangat fast respons dan ramah.</p>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="col-md-4">
+                <div class="review_item">
+                    <div class="review_content">
+                        <h3>Comfortable! </h3>
+                        <div class="review_rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                        <div class="review_author">
-                            <img src="images/natan.jpg" alt="Image">
-                            <div class="author_info">
-                                <h5>Nataneal</h5>
-                                <span class="place">Perumas, Yogyakarta</span>
-                                
-                            </div>
+                        <p>Kost-kostan dengan lokasi strategis dengan kampus & mudah dijangkau, suasana homey, tata ruang kamar & dekorasi serta perabotannya yang fungsional & simple. Kost "DreamKost" dengan harga terjangkau.Nyaman banget untuk kos anak kuliah atau kerja. Kalo malam sangat sunyi & adem jadi cocok untuk cari tempat tinggal yang peaceful. Petugasnya sangat fast respons dan ramah.</p>
+                    </div>
+                    <div class="review_author">
+                        <img src="images/natan.jpg" alt="Image">
+                        <div class="author_info">
+                            <h5>Nataneal</h5>
+                            <span class="place">Perumas, Yogyakarta</span>
+
                         </div>
                     </div>
                 </div>
-                
-        
+            </div>
+
+
         </div>
 </div>
 
