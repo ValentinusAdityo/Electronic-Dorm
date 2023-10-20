@@ -46,8 +46,11 @@ class LoginController extends BaseController
 
         if ($pelangganModel) {
             $dataUser = [
-                'id' => $pelangganModel['id'],
                 'user' => $pelangganModel['nama'],
+                'alamat' => $pelangganModel['alamat'],
+                'no_hp' => $pelangganModel['no_hp'],
+                'email' => $pelangganModel['email'],
+                'created_at' => $pelangganModel['created_at'],
                 'is_admin' => false
             ];
             $session = session();
@@ -63,7 +66,12 @@ class LoginController extends BaseController
         $session = session();
         $session->remove('admin');
         $session->remove('user');
-        $session->set('is_admin', false);
+        $session->remove('alamat');
+        $session->remove('no_hp');
+        $session->remove('email');
+        $session->remove('created_at');
+        $session->remove('is_admin');
+        $session->destroy();
 
         return view('login/login');
     }

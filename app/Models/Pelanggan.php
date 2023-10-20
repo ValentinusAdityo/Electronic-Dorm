@@ -25,12 +25,12 @@ class Pelanggan extends Model
 
     // Validation
     protected $validationRules      = [
-        'nama' => 'permit_empty|alpha_numeric_space|max_length[255]|min_length[3]',
-        'alamat' => 'permit_empty',
-        'no_hp' => 'permit_empty|numeric|max_length[15]|min_length[10]',
-        'email' => 'permit_empty|valid_email|max_length[255]',
+        'nama' => 'required|alpha_numeric_space|max_length[255]|min_length[3]',
+        'alamat' => 'required',
+        'no_hp' => 'required|numeric|max_length[15]|min_length[10]',
+        'email' => 'required|valid_email|max_length[255]',
         'password' => 'required|max_length[16]|alpha_numeric_space|min_length[8]',
-        'created_at' => 'permit_empty|valid_date',
+        'created_at' => 'required|valid_date',
         'updated_at' => 'required|valid_date'
     ];
     protected $validationMessages   = [];
@@ -53,7 +53,29 @@ class Pelanggan extends Model
     private $email;
     private $password;
     private $alamat;
-    private $data = [];
+    private $data;
+
+    private function validation($dataCreated)
+    {
+        $validation = \Config\Services::validation();
+
+        $this->data = [
+            'nama' => $this->nama,
+            'alamat' => $this->alamat,
+            'no_hp' => $this->no_hp,
+            'email' => $this->email,
+            'password' => $this->password,
+            'created_at' => $dataCreated,
+            'updated_at' => date('Y-m-d H:i:s')
+        ];
+
+        $validation->setRules($this->validationRules);
+
+        if (!$validation->run($this->data)) {
+            return $this->validation->getErrors();
+        }
+        return true;
+    }
 
     public function __construct($nama, $no_hp, $email, $password, $alamat)
     {
@@ -63,29 +85,34 @@ class Pelanggan extends Model
         $this->password = $password;
         $this->alamat = $alamat;
 
-        $validation = \Config\Services::validation();
-
-        $this->data = [
-            'nama' => $this->nama,
-            'alamat' => $this->alamat,
-            'no_hp' => $this->no_hp,
-            'email' => $this->email,
-            'password' => $this->password,
-            'updated_at' => date('Y-m-d H:i:s')
-        ];
-
-        $validation->setRules($this->validationRules);
-
-        if (!$validation->run($this->data)) {
-            return $this->validation->getErrors();
-        }
-
         $db = \Config\Database::connect();
         parent::__construct($db);
     }
 
     public function getPenggunaData()
     {
+        $validation = \Config\Services::validation();
+
+        $this->data = [
+            'nama' => $this->nama,
+            'no_hp' => $this->no_hp,
+            'email' => $this->email,
+            'password' => $this->password,
+        ];
+
+        $validationRules = [
+            'nama' => 'permit_empty|alpha_numeric_space|max_length[255]|min_length[3]',
+            'no_hp' => 'permit_empty|numeric|max_length[15]|min_length[10]',
+            'email' => 'permit_empty|valid_email|max_length[255]',
+            'password' => 'required|max_length[16]|alpha_numeric_space|min_length[8]'
+        ];
+
+        $validation->setRules($validationRules);
+
+        if (!$validation->run($this->data)) {
+            return $this->validation->getErrors();
+        }
+
         $query = $this->db->table($this->table)
             ->where('password', $this->password);
 
@@ -108,33 +135,38 @@ class Pelanggan extends Model
 
     public function setPenggunaData()
     {
-        $this->data['created_at'] = date('Y-m-d H:i:s');
-        try {
-            $this->db->table($this->table)->insert($this->data);
-            return true;
-        } catch (\Exception $e) {
-            return false;
+        if ($this->validation(date('Y-m-d H:i:s'))) {
+            try {
+                $this->db->table($this->table)->insert($this->data);
+                return true;
+            } catch (\Exception $e) {
+                return false;
+            }
         }
     }
 
     public function updatePenggunaData(SessionInterface $session)
     {
-        try {
-            $this->db->table($this->table)->update($session->get('id'), $this->data);
-            $updatedData = $this->db->table($this->table)->where($session->get('id'))->get()->getRow();
-            return $updatedData;
-        } catch (\Exception $e) {
-            return null;
+        if ($this->validation($session->get('created_at'))) {
+            try {
+                $this->db->table($this->table)->update($session->get('id'), $this->data);
+                $updatedData = $this->db->table($this->table)->where($session->get('id'))->get()->getRow();
+                return $updatedData;
+            } catch (\Exception $e) {
+                return null;
+            }
         }
     }
 
     public function deletePenggunaData(SessionInterface $session)
     {
-        try {
-            $this->db->table($this->table)->delete($session->get('id'));
-            return true;
-        } catch (\Exception $e) {
-            return false;
+        if ($this->validation($session->get('created_at'))) {
+            try {
+                $this->db->table($this->table)->delete($session->get('id'));
+                return true;
+            } catch (\Exception $e) {
+                return false;
+            }
         }
     }
 }

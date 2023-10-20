@@ -23,11 +23,11 @@ class Kamar extends Model
 
     // Validation
     protected $validationRules      = [
-        'fasilitas' => 'permit_empty',
+        'fasilitas' => 'required',
         'harga' => 'required|numeric',
         'deskripsi' => 'required|alpha_space',
         'status' => 'required|in_list[0,1]',
-        'gambar' => 'permit_empty',
+        'gambar' => 'required',
     ];
     protected $validationMessages   = [];
     protected $skipValidation       = false;
@@ -50,14 +50,8 @@ class Kamar extends Model
     private $status;
     private $gambar;
 
-    public function __construct($fasilitas = null, $harga = null, $deskripsi = null, $status = null, $gambar = null)
+    private function validation()
     {
-        $this->fasilitas = $fasilitas;
-        $this->harga = $harga;
-        $this->deskripsi = $deskripsi;
-        $this->status = $status;
-        $this->gambar = $gambar;
-
         $validation = \Config\Services::validation();
 
         $data = [
@@ -70,10 +64,19 @@ class Kamar extends Model
 
         $validation->setRules($this->validationRules);
 
-
         if (!$validation->run($data)) {
             return $validation->getErrors();
         }
+        return true;
+    }
+
+    public function __construct($fasilitas = null, $harga = null, $deskripsi = null, $status = null, $gambar = null)
+    {
+        $this->fasilitas = $fasilitas;
+        $this->harga = $harga;
+        $this->deskripsi = $deskripsi;
+        $this->status = $status;
+        $this->gambar = $gambar;
 
         $db = \Config\Database::connect();
         parent::__construct($db);
@@ -95,13 +98,14 @@ class Kamar extends Model
         }
     }
 
-
     public function setKamarData()
     {
-        try {
-            $query = $this->db->table($this->table);
-        } catch (\Throwable $th) {
-            //throw $th;
+        if($this->validation()){
+            try {
+                $query = $this->db->table($this->table);
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
         }
     }
 
