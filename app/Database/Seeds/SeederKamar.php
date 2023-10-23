@@ -11,6 +11,7 @@ class SeederKamar extends Seeder
         for($i=0; $i<100; $i++){
             $faker = \Faker\Factory::create();
             $data = [
+                'nama' => $faker->name,
                 'fasilitas' => $faker->text,
                 'harga' => $faker->randomNumber(2),
                 'deskripsi' => $faker->text,

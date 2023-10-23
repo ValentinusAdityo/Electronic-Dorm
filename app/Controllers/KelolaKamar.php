@@ -2,48 +2,39 @@
 
 namespace App\Controllers;
 
-use App\Models\KamarModel;
+use App\Models\Kamar;
 
 class KelolaKamar extends BaseController
 {
     public function input()
     {
-        $model = model(KamarModel::class);
-        $data = [
-            'list' => $model->getKamar(),
-            'title' => 'Tambah Kamar'
-        ];
-
         $session = session();
         if ($session->has('admin')) {
             helper('form');
             // Memeriksa apakah melakukan submit data atau tidak.
             if (!$this->request->is('post')) {
-                return view('layout/header', $data) . view('layout/navbarAdmin')
+                return view('layout/header', ['title' => 'Tambah Kamar']) . view('layout/navbarAdmin')
                     . view('kelola/input')
                     . view("layout/footer");
             }
 
-            $nama_file = $_FILES['gambar']['name'];
-            $source = $_FILES['gambar']['tmp_name'];
-            $folder = '/images/rooms/';
+            $fasilitas = $this->request->getPost('fasilitas');
+            $harga = $this->request->getPost('harga');
+            $deskripsi = $this->request->getPost('deskripsi');
+            $namaKamar = $this->request->getPost('namaKamar');
 
-            move_uploaded_file($source, '.' . $folder . $nama_file);
+            $img = $this->request->getFile('gambar');
+            if (!$img->hasMoved()) {
 
-            // Mengambil data yang disubmit dari form
-            $post = $this->request->getPost([
-                'idKamar',
-                'namaKamar',
-                'deskripsi',
-                'fasilitas',
-                'harga'
-            ]);
-            $post['nama_file'] = $nama_file;
+                $publicPath = 'uploads/';
 
-            // Mengakses Model untuk menyimpan data
-            $model = model(KamarModel::class);
-            $model->simpan($post);
-            return redirect()->to('/rooms');
+                $filePath = FCPATH . $publicPath;
+                $newName = $img->getRandomName();
+                $img->move($filePath, $newName);
+
+                (new Kamar($namaKamar, $fasilitas, $harga, $deskripsi, 0, $newName))->setKamarData();
+                return redirect()->to('/rooms');
+            }
         } else {
             return view('login/login');
         }
@@ -51,43 +42,35 @@ class KelolaKamar extends BaseController
 
     public function update()
     {
-        $db = \Config\Database::connect();
-        $model = model(KamarModel::class);
-        $data = [
-            'list' => $model->getKamar(),
-            'title' => 'Ubah Kamar'
-        ];
-        $model = $db->table('kamar');
         $session = session();
 
-
-        
         if ($session->has('admin')) {
             helper('form');
 
             if (!$this->request->is('post')) {
-                return view('layout/header', $data)
+                return view('layout/header', ['title' => 'Ubah Kamar'])
                     . view('layout/navbarAdmin')
                     . view('kelola/update')
                     . view("layout/footer");
             }
 
-            $nama_file = $_FILES['gambar']['name'];
-            $source = $_FILES['gambar']['tmp_name'];
-            $folder = '/images/rooms/';
-            move_uploaded_file($source, '.' . $folder . $nama_file);
+            $fasilitas = $this->request->getPost('fasilitas');
+            $harga = $this->request->getPost('harga');
+            $deskripsi = $this->request->getPost('deskripsi');
+            $namaKamar = $this->request->getPost('namaKamar');
 
-            $data = [
-                'nama' => [$this->request->getPost('namaKamar'),],
-                'deskripsi' => [$this->request->getPost('deskripsi'),],
-                'fasilitas' => [$this->request->getPost('fasilitas'),],
-                'gambar' => [$nama_file,],
-                'harga' => [$this->request->getPost('harga'),]
-            ];
+            $img = $this->request->getFile('gambar');
+            if (!$img->hasMoved()) {
 
-            $model->where('kamar_id', $this->request->getPost('idKamar'));
-            $model->update($data);
-            return redirect()->to('/rooms');
+                $publicPath = 'uploads/';
+
+                $filePath = FCPATH . $publicPath;
+                $newName = $img->getRandomName();
+                $img->move($filePath, $newName);
+
+                (new Kamar($namaKamar, $fasilitas, $harga, $deskripsi, 0, $newName))->updateKamarData($this->request->getPost('idKamar'));
+                return redirect()->to('/rooms');
+            }
         } else {
             return view('login/login');
         }
@@ -95,27 +78,15 @@ class KelolaKamar extends BaseController
 
     public function delete()
     {
-        $model = model(KamarModel::class);
-        $data = [
-            'list' => $model->getKamar(),
-            'title' => 'Hapus Kamar'
-        ];
         $session = session();
         if ($session->has('admin')) {
-            $db = \Config\Database::connect();
-            $builder = $db->table('kamar');
-            helper('form');
             if (!$this->request->is('post')) {
-                return view('layout/header', $data)
+                return view('layout/header', ['title' => 'Hapus Kamar'])
                     . view('layout/navbarAdmin')
                     . view('kelola/delete')
                     . view('layout/footer');
             }
-            $post = $this->request->getPost([
-                'idKamar'
-            ]);
-            $builder->where('kamar_id', $post);
-            $builder->delete();
+            (new Kamar())->deleteKamarData($this->request->getPost());
             return redirect()->to('/rooms');
         } else {
             return view('login/login');

@@ -24,7 +24,7 @@ class Admin extends Model
 
     // Validation
     protected $validationRules      = [
-        'nama' => 'permit_empty|alpha_numeric_space|max_length[255]|min_length[3]',
+        'nama' => 'permit_empty|alpha_space|max_length[255]|min_length[3]',
         'no_hp' => 'permit_empty|numeric|max_length[15]|min_length[10]',
         'password' => 'required|max_length[16]|alpha_numeric_space|min_length[8]',
     ];

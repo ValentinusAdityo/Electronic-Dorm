@@ -10,6 +10,8 @@ class Kamar extends Migration
     {
         $this->forge->addField('id');
         $this->forge->addField([
+            'id' => ['type' => 'INT', 'auto_increment' => true],
+            'nama'       => ['type' => 'varchar', 'constraint' => 255],
             'fasilitas'      => ['type' => 'text'],
             'harga'    => ['type' => 'double'],
             'deskripsi' => ['type' => 'text'],

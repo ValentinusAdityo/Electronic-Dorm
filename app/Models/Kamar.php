@@ -23,6 +23,7 @@ class Kamar extends Model
 
     // Validation
     protected $validationRules      = [
+        'nama' => 'required|alpha_space|max_length[255]|min_length[3]',
         'fasilitas' => 'required',
         'harga' => 'required|numeric',
         'deskripsi' => 'required|alpha_space',
@@ -44,17 +45,20 @@ class Kamar extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+    private $nama;
     private $fasilitas;
     private $harga;
     private $deskripsi;
     private $status;
     private $gambar;
+    private $data;
 
     private function validation()
     {
         $validation = \Config\Services::validation();
 
-        $data = [
+        $this->data = [
+            'nama' => $this->nama,
             'fasilitas' => $this->fasilitas,
             'harga' => $this->harga,
             'deskripsi' => $this->deskripsi,
@@ -64,14 +68,15 @@ class Kamar extends Model
 
         $validation->setRules($this->validationRules);
 
-        if (!$validation->run($data)) {
+        if (!$validation->run($this->data)) {
             return $validation->getErrors();
         }
         return true;
     }
 
-    public function __construct($fasilitas = null, $harga = null, $deskripsi = null, $status = null, $gambar = null)
+    public function __construct($nama = null, $fasilitas = null, $harga = null, $deskripsi = null, $status = null, $gambar = null)
     {
+        $this->nama = $nama;
         $this->fasilitas = $fasilitas;
         $this->harga = $harga;
         $this->deskripsi = $deskripsi;
@@ -102,28 +107,36 @@ class Kamar extends Model
     {
         if($this->validation()){
             try {
-                $query = $this->db->table($this->table);
+                $this->db->table($this->table)->insert($this->data);
+                return true;
             } catch (\Throwable $th) {
-                //throw $th;
+                return false;
             }
         }
     }
 
-    public function updateKamarData()
+    public function updateKamarData($id)
     {
-        try {
-            //code...
-        } catch (\Throwable $th) {
-            //throw $th;
+        if($this->validation()){
+            try {
+                $this->db->table($this->table)->where('id', $id)->update($this->data);
+                $updatedData = $this->db->table($this->table)->where('id', $id)->get()->getRow();
+                return $updatedData;
+            } catch (\Throwable $th) {
+                return null;
+            }
         }
     }
 
-    public function deleteKamarData()
+    public function deleteKamarData($id)
     {
-        try {
-            //code...
-        } catch (\Throwable $th) {
-            //throw $th;
+        if($this->validation()){
+            try {
+                $this->db->table($this->table)->where('id', $id)->delete();
+                return true;
+            } catch (\Throwable $th) {
+                return false;
+            }
         }
     }
 }

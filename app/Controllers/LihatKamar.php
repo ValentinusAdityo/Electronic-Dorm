@@ -10,7 +10,6 @@ class LihatKamar extends BaseController
     {
         $session = session();
         $kamarModel = (new Kamar())->getAllKamarData();
-        $model = model(KamarModel::class);
         $data = [
             'list' => $kamarModel,
             'title' => 'EuforiaHome - Rooms List View'

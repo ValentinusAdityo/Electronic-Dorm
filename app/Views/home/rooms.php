@@ -23,21 +23,25 @@
             </form>
         </div><br>
         <!-- ITEM -->
-        <?php foreach ($list as $l) : ?>
+
+        <?php
+        $counter = 1;
+        foreach ($list as $l) : ?>
 
             <article class="room_list" cl>
                 <div class="row row-flex">
                     <div class="col-lg-4 col-md-5 col-sm-12">
                         <figure>
                             <a href="room.html" class="hover_effect h_link h_blue">
-                                <img src="images/rooms/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
+                                <img src="uploads/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
                             </a>
                         </figure>
                     </div>
                     <div class="col-lg-8 col-md-7 col-sm-12">
                         <div class="room_details row-flex">
                             <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
-                                <h5>No: <?= esc($l->id) ?></h5><br>
+                                <h5>No: <?= $counter ?></h5><br>
+                                <?php $counter++; ?>
                                 <h3><a href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->id) ?> </a></h3>
                                 <p>
                                     <?= esc($l->deskripsi) ?>
@@ -60,11 +64,7 @@
                 </div>
             </article>
         <?php endforeach ?>
-
-
-
     </div>
 </main>
-
 
 </div>
