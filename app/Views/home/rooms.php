@@ -42,7 +42,7 @@
                             <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
                                 <h5>No: <?= $counter ?></h5><br>
                                 <?php $counter++; ?>
-                                <h3><a href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->id) ?> </a></h3>
+                                <h3><a href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </a></h3>
                                 <p>
                                     <?= esc($l->deskripsi) ?>
                                 </p>
