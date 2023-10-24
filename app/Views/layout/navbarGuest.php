@@ -9,9 +9,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/logo_dreambiru.png" height="50" alt="logo">
+                    <img src="images/logo_dreambiru.png" height="32" alt="logo">
                 </a>
-
             </div>
             <nav id="main_menu" class="mobile_menu navbar-collapse">
                 <ul class="nav navbar-nav">
