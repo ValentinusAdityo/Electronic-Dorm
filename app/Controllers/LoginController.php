@@ -15,7 +15,7 @@ class LoginController extends BaseController
 
     public function check()
     {
-        $data = ['title' => 'EuforiaHome'];
+        $data = ['title' => 'DreamKost'];
 
         /** @var string */
         $user = $this->request->getPost('usr');

@@ -12,7 +12,7 @@ class LihatKamar extends BaseController
         $kamarModel = (new Kamar())->getAllKamarData();
         $data = [
             'list' => $kamarModel,
-            'title' => 'EuforiaHome - Rooms List View'
+            'title' => 'DreamKost - Rooms List View'
         ];
         if ($session->has('admin')) {
             return view('layout/header', $data)

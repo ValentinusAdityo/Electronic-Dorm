@@ -13,7 +13,7 @@ class DataTagihan extends BaseController
         $model = model(SewaModel::class);
         $data = [
             'list' => $model->getTagihan(),
-            'title' => 'EuforiaHome - Rooms List View'
+            'title' => 'DreamKost - Rooms List View'
         ];
 
         if ($session->has('admin')) {
@@ -33,7 +33,7 @@ class DataTagihan extends BaseController
         $session = session();
         $model = model(SewaModel::class);
 
-        $data = ['title' => 'EuforiaHome - Booking Form'];
+        $data = ['title' => 'DreamKost - Booking Form'];
         $data['sewa_id'] = $model->getTagihan($slug);
 
         if ($session->has('admin')) {

@@ -8,7 +8,7 @@ class Transaksi extends BaseController
     {
         $session = session();;
         if ($session->has('user')) {
-            $data = ['title' => 'EuforiaHome|Pembayaran'];
+            $data = ['title' => 'DreamKost|Pembayaran'];
             return view('layout/header', $data)
                 . view('layout/navbarUser')
                 . view('pembayaran/pembayaran')

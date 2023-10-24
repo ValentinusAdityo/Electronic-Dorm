@@ -10,7 +10,7 @@ class Pemesanan extends BaseController
     public function booking($slug = null)
     {
         $session = session();
-        $data = ['title' => 'EuforiaHome - Booking Form'];
+        $data = ['title' => 'DreamKost - Booking Form'];
         $model = model(KamarModel::class);
 
         $data['kamar'] = $model->getKamar($slug);

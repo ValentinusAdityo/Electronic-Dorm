@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data = ['title' => 'EuforiaHome'];
+        $data = ['title' => 'DreamKost'];
 
         $session = session();
 
@@ -22,7 +22,7 @@ class Home extends BaseController
 
     public function about()
     {
-        $data = ['title' => 'About EuforiaHome'];
+        $data = ['title' => 'About DreamKost'];
 
         $session = session();
 
