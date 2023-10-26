@@ -35,6 +35,7 @@ class LihatKamar extends BaseController
         if (!$this->request->is('post')) {
             return view('home/rooms');
         }
+
         $id = $this->request->getPost(['key']);
 
         $model = model(KamarModel::class);

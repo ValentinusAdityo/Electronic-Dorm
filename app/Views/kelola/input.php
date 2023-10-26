@@ -30,9 +30,6 @@
                             <?= csrf_field() ?>
 
                             <div class="form-group">
-                                <input class="form-control" name="idKamar" placeholder="Masukkan ID Kamar" type="text">
-                            </div>
-                            <div class="form-group">
                                 <input class="form-control" name="namaKamar" placeholder="Masukkan Nama Kamar" type="text">
                             </div>
                             <div class="form-group">
@@ -42,6 +39,7 @@
                                 <input class="form-control" name="fasilitas" placeholder="Masukkan Fasilitas Kamar" type="text">
                             </div>
                             <div class="form-group">
+                            <?= form_open_multipart('KelolaKamar/input') ?>
                                 <input class="form-control" name="gambar" type="file">
                             </div>
                             <div class="form-group">
