@@ -5,6 +5,7 @@
         <div class="inner">
             <div class="row">
                 <div class="col-md-6 col-sm-6">
+
                     <h1><?= esc($kamar->nama) ?></h1>
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
@@ -37,9 +38,7 @@
                                 <img class="img-responsive" src="images/rooms/<?= esc($kamar->gambar) ?>" alt="Image">
                             </a>
                         </div>
-
                     </div>
-
                 </div>
                 <div class="main_title mt50">
                     <h2>ABOUT <?= esc($kamar->nama) ?></h2>
@@ -86,28 +85,26 @@
                     <aside class="widget">
                         <div class="vbf">
                             <h2 class="form_title"><i class="fa fa-calendar"></i> BOOK ONLINE </h2>
-                            <form id="booking-form" class="inner" method="/payment" action="post">
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12 nopadding">
-                                    <div class="input-group date" id="datetimepicker1">
-                                        <input type="text" class="form-control" name="booking-date" placeholder="Pilih tanggal awal" />
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+
+                            <form class="inner" method="POST" action="/payment">
+                                <div class="form-group">
+                                    <div class="input-group date">
+                                        <label for="booking-date">Pilih tanggal awal:</label>
+                                        <input class="form-control" name="booking-date" type="date" />
                                     </div>
-                                </div>
-                                <div class="form-group col-md-6 col-sm-6 col-xs-12 nopadding">
                                     <div class="form_select">
-                                        <select name="booking-roomdate" class="form-control" title="Pilih Lama Kost" data-header="Room Date" enabled>
+                                        <label for="booking-roomdate">Pilih Lama Kost:</label>
+                                        <select name="booking-roomdate" class="form-control">
                                             <option value="1 Month">1 Month</option>
                                             <option value="6 Month">6 Month</option>
                                             <option value="1 Year">1 Year</option>
                                             <option value="2 Year">2 Year</option>
                                         </select>
                                     </div>
-
                                 </div>
-                                <button class="button btn_lg btn_blue btn_full" type="submit">BOOK A ROOM NOW</button>
+                                <button class="button btn_lg btn_blue btn_full" type="submit" >BOOK A ROOM NOW</button>
                             </form>
+
                         </div>
                     </aside>
                     <aside class="widget">
