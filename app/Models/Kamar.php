@@ -103,9 +103,25 @@ class Kamar extends Model
         }
     }
 
+    public function getKamarDataById($id)
+    {
+        try {
+            $query = $this->db->table($this->table)->where('id', $id)->get();
+            
+            if ($query->getNumRows() > 0) {
+                return $query->getRow();
+            } else {
+                return "No records found";
+            }
+        } catch (\Exception $e) {
+            // Handle any exceptions here
+            return "An error occurred: " . $e->getMessage();
+        }
+    }
+
     public function setKamarData()
     {
-        if($this->validation()){
+        if ($this->validation()) {
             try {
                 $this->db->table($this->table)->insert($this->data);
                 return true;
@@ -117,7 +133,7 @@ class Kamar extends Model
 
     public function updateKamarData($id)
     {
-        if($this->validation()){
+        if ($this->validation()) {
             try {
                 $this->db->table($this->table)->where('id', $id)->update($this->data);
                 $updatedData = $this->db->table($this->table)->where('id', $id)->get()->getRow();
@@ -130,7 +146,7 @@ class Kamar extends Model
 
     public function deleteKamarData($id)
     {
-        if($this->validation()){
+        if ($this->validation()) {
             try {
                 $this->db->table($this->table)->where('id', $id)->delete();
                 return true;

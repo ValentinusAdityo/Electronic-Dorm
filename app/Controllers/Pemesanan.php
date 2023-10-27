@@ -2,18 +2,19 @@
 
 namespace App\Controllers;
 
-use App\Models\KamarModel;
+use App\Models\Kamar;
 
 class Pemesanan extends BaseController
 {
 
-    public function booking($slug = null)
+    public function booking($id)
     {
         $session = session();
+        $kamarModel = (new Kamar())->getKamarDataById($id);
         $data = ['title' => 'DreamKost - Booking Form'];
-        $model = model(KamarModel::class);
 
-        $data['kamar'] = $model->getKamar($slug);
+        $data['kamar'] = $kamarModel;
+
         if ($session->has('admin')) {
             return view('layout/header', $data) . view('layout/navbarAdmin')
                 . view('pemesanan/booking') . view('layout/footer');

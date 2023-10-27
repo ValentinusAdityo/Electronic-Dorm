@@ -5,17 +5,17 @@
         <div class="inner">
             <div class="row">
                 <div class="col-md-6 col-sm-6">
-                    <h1><?= esc($kamar['nama']) ?></h1>
+                    <h1><?= esc($kamar->nama) ?></h1>
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
                         <li><a href="/rooms">Rooms</a></li>
-                        <li><?= esc($kamar['nama']) ?></li>
+                        <li><?= esc($kamar->nama) ?></li>
                     </ol>
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <div class="price">
                         <div class="inner">
-                            Rp<?= esc($kamar['harga']) ?><span>monthly</span>
+                            Rp<?= esc($kamar->harga) ?><span>monthly</span>
                         </div>
                     </div>
                 </div>
@@ -33,8 +33,8 @@
                     <div id="slider-larg" class="owl-carousel image-gallery">
                         <!-- ITEM -->
                         <div class="item lightbox-image-icon">
-                            <a href="images/rooms/<?= esc($kamar['gambar']) ?>" class="hover_effect h_lightbox h_blue">
-                                <img class="img-responsive" src="images/rooms/<?= esc($kamar['gambar']) ?>" alt="Image">
+                            <a href="images/rooms/<?= esc($kamar->gambar) ?>" class="hover_effect h_lightbox h_blue">
+                                <img class="img-responsive" src="images/rooms/<?= esc($kamar->gambar) ?>" alt="Image">
                             </a>
                         </div>
 
@@ -42,10 +42,10 @@
 
                 </div>
                 <div class="main_title mt50">
-                    <h2>ABOUT <?= esc($kamar['nama']) ?></h2>
+                    <h2>ABOUT <?= esc($kamar->nama) ?></h2>
                 </div>
                 <p>
-                    <?= esc($kamar['deskripsi']) ?>
+                    <?= esc($kamar->deskripsi) ?>
                 </p>
                 <div class="main_title t_style a_left s_title mt50">
                     <div class="c_inner">
@@ -87,15 +87,6 @@
                         <div class="vbf">
                             <h2 class="form_title"><i class="fa fa-calendar"></i> BOOK ONLINE </h2>
                             <form id="booking-form" class="inner" method="/payment" action="post">
-                                <div class="form-group">
-                                    <input class="form-control" name="booking-name" placeholder="Masukkan Nama" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" name="booking-email" placeholder="Masukkan email" type="email">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" name="booking-phone" placeholder="Masukkan No HP" type="text">
-                                </div>
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12 nopadding">
                                     <div class="input-group date" id="datetimepicker1">
                                         <input type="text" class="form-control" name="booking-date" placeholder="Pilih tanggal awal" />
