@@ -322,7 +322,7 @@
             <div class="blob"></div>
             <div class="blob"></div>
             <div class="contain">
-                <h1>Selamat Datang Sobat Euphoria!</h1>
+                <h1>Selamat Datang Sobat DreamKost!</h1>
 
                 <h4>We are happy to have you back, please sign back in to continue</h4>
 
