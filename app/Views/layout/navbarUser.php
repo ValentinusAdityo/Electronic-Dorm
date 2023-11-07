@@ -17,10 +17,10 @@
                 <ul class="nav navbar-nav">
                     <li class="mobile_menu_title" style="display: none">MENU</li>
                     <li>
-                        <a href="/">HOME</a>
+                        <a href="/">BERANDA</a>
                     </li>
                     <li>
-                        <a href="/rooms">ROOMS</a>
+                        <a href="/rooms">KAMAR</a>
                     </li>
                     <li class="dropdown simple_menu"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">Dashboard <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -29,7 +29,8 @@
                             <li><a href="/payment">Pembayaran</a></li>
                         </ul>
                     </li>
-                    <li><a href="/about">ABOUT US</a></li>
+                    <li><a href="/about">TENTANG KAMI</a></li>
+                    <li><a href="/">PROFILKU</a></li>
                     <li class="menu_button">
                         <a href="/logout" class="button btn_blue">Sign Out</a>
                     </li>

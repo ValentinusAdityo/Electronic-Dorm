@@ -16,12 +16,12 @@
                 <ul class="nav navbar-nav">
                     <li class="mobile_menu_title" style="display:none;">MENU</li>
                     <li>
-                        <a href="/">HOME</a>
+                        <a href="/">BERANDA</a>
                     </li>
                     <li>
-                        <a href="/rooms">ROOMS</a>
+                        <a href="/rooms">KAMAR</a>
                     </li>
-                    <li class="dropdown mega_menu mega_menu_fullwidth"><a href="/about" data-toggle="dropdown" class="" aria-expanded="true">ABOUT US<b class="caret"></b></a>
+                    <li class="dropdown mega_menu mega_menu_fullwidth"><a href="/about" data-toggle="dropdown" class="" aria-expanded="true">TENTANG KAMI<b class="caret"></b></a>
                     <li class="menu_button">
                         <a href="/login" class="button btn_yellow">Login</a>
                     </li>
