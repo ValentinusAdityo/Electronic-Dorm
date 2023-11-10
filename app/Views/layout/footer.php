@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 widget">
                     <div class="about">
-                        <a href="/"><img class="logo" src="images/logo_dreambiru.png" height="32" alt="Logo"></a>
+                        <a href="/"><img class="logo" src="images/dk.png" height="32" alt="Logo"></a>
                         <p class="text-justify">DreamKost adalah salah satu gedung kost murah di Yogyakarta yang berlokasi di Jalan Perumnas, Cadong catur, Depok, Sleman dimana merupakan kawasan bisnis dan kuliner terkemuka di Yogyakarta. Dengan jarak tempuh sekitar 10 menit menuju area Kampus, Perkantoran dan Mall ternama di Yogyakarta, menjadikan DreamKost Perumnas sebagai sebuah pilihan yang sangat tepat bagi para mahasiswa maupun profesional muda yang mencari tempat hunian yang berkelas dan strategis</p>
                     </div>
                 </div>

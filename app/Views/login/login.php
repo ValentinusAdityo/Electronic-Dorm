@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="apple-touch-icon-precomposed" href="images/logo_dreambiru.png" />
-    <link rel="icon" href="images/logo_dreambiru.png">
+    <link rel="apple-touch-icon-precomposed" href="images/dk.png" />
+    <link rel="icon" href="images/dk.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
