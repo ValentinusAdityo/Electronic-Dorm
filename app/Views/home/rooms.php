@@ -26,6 +26,7 @@
 
         <?php
         $counter = 1;
+        $jumKamar = 1;
         foreach ($list as $l) : ?>
 
             <article class="room_list" cl>
@@ -55,8 +56,10 @@
                             <div class="col-md-3 col-sm-3 col-xs-12 room_price">
                                 <div class="room_price_inner">
                                     <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
-                                    <small class="upper"> per Month </small>
-                                    <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Book Now</a>
+                                    <small class="upper"> per Bulan </small>
+                                    <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Pesan Sekarang</a>
+                                    <?php if ($jumKamar == 10) break;  ?>
+                                    <?php $jumKamar++ ?>
                                 </div>
                             </div>
                         </div>
