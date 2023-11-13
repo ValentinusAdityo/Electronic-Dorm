@@ -38,8 +38,7 @@ class LihatKamar extends BaseController
 
         $id = $this->request->getPost(['key']);
 
-        $model = model(KamarModel::class);
-        $kamar = $model->ambil($id['key']);
+        $kamar = (new Kamar())->getKamarDataById($id);
 
         $data = ['hasil' => $kamar, 'title' => 'Cari Kamar'];
         if ($session->has('admin')) {
