@@ -23,31 +23,31 @@
         <!-- <div class="table-responsive"> -->
         <table class="table table-hover ">
             <h2>Mohon Konfirmasi Pembayaran</h2><br>
+            <?php $session = session() ?>
             <tbody>
                 <tr>
-                    <td>ID Transaksi</td>
-                    <td>1223</td>
-
-                </tr>
-                <tr>
                     <td>No Kamar</td>
-                    <td>18</td>
+                    <td><?= $room_data->id; ?></td>
                 </tr>
                 <tr>
                     <td>Nama</td>
-                    <td>Hizkia Pratama</td>
+                    <td><?= $session->user; ?></td>
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td></td>
+                    <td><?= $session->email; ?></td>
                 </tr>
                 <tr>
                     <td>No HP</td>
-                    <td></td>
+                    <td><?= $session->no_hp ?></td>
+                </tr>
+                <tr>
+                    <td>Awal Mulai</td>
+                    <td><?= $date_start; ?></td>
                 </tr>
                 <tr>
                     <td>Masa Berlaku</td>
-                    <td></td>
+                    <td><?= $date_end; ?></td>
                 </tr>
                 <tr>
                     <td>Metode Pembayaran</td>
@@ -63,7 +63,7 @@
                         <h3>Total Pembayaran</h3>
                     </td>
                     <td>
-                        <h3>Rp300.000</h3>
+                        <h3>Rp. <?= $total; ?></h3>
                     </td>
                 </tr>
             </tbody>
