@@ -10,7 +10,7 @@
     <title><?= $title; ?></title>
 
     <!-- ========== FAVICON ========== -->
-    <link rel="apple-touch-icon-precomposed" href="images/dk.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/dreamkostlogo.png" />
     <link rel="icon" href="images/dreamkostlogo.png">
 
     <!-- ========== STYLESHEETS ========== -->
