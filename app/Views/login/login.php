@@ -300,13 +300,13 @@
 <body>
     <main class="login">
         <div class="main-login">
-
-            <form action="/login/check" method="post">
+        <form action="/login/check" method="post" onsubmit="showLoading()">
                 <?= csrf_field() ?>
                 <h1>Login Page</h1>
                 <input class="usr put" name="usr" placeholder="Username" type="text">
                 <br>
                 <input id="pass" name="pwd" class="pss put" placeholder="Password" type="password"><button id="bhde" onclick="show()" class="shw" type="button">show</button>
+                <div id="loading" class="loading-spinner" style="display: none;"></div>
                 <a class="pass" href="">Forgot Password</a>
                 <input value="Login" id="btn" class="sub" type="submit" name="submit">
                 <div class="lines">
@@ -330,6 +330,33 @@
             </div>
         </div>
     </main>
+    <style>
+        /* Add a rotating animation for the loading spinner */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .button-container {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 6px solid #3da9fc;
+            width: 60px;
+            height: 60px;
+            animation: rotate 2s linear infinite;
+            display: none;
+        }
+    </style>
 
     <script>
         function show() {
@@ -342,6 +369,23 @@
                 x.type = "password";
                 y.innerText = "Show";
             }
+        }
+    </script>
+    <script>
+        function showLoading() {
+            // Display the loading animation
+            var loadingElement = document.getElementById("loading");
+            loadingElement.style.display = "block";
+
+            // You can add additional logic here if needed
+
+            // Hide the loading animation after a certain time (for example, 3 seconds)
+            setTimeout(function () {
+                loadingElement.style.display = "none";
+            }, 3000);
+
+            // Returning true to allow the form submission to proceed
+            return true;
         }
     </script>
 </body>
