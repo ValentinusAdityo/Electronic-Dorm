@@ -35,4 +35,22 @@ class Home extends BaseController
             return view('layout/header', $data) . view('layout/navbarGuest') . view('home/about') . view('layout/footer');
         }
     }
+    
+    public function profil()
+    {
+        $data = ['title' => 'About DreamKost'];
+
+        $session = session();
+
+        if ($session->has('admin')) {
+            return view('layout/header', $data) . view('layout/navbarAdmin') . view('home/profil') . view('layout/footer');
+        }
+        if ($session->has('user')) {
+            return view('layout/header', $data) . view('layout/navbarUser') . view('home/profil') . view('layout/footer');
+        } else {
+            return view('layout/header', $data) . view('layout/navbarGuest') . view('home/profil') . view('layout/footer');
+        }
+    }
 }
+
+

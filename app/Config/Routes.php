@@ -59,6 +59,7 @@ $routes->match(['get', 'post'], '/paymentconfirm', [Transaksi::class, 'konfirmas
 $routes->match(['get', 'post'], '/bills', [DataTagihan::class, 'tagihan']);
 $routes->match(['get', 'post'], '/billsUser', [DataTagihan::class, 'tagihanUser']);
 $routes->match(['get', 'post'], '/(:segment)', [Pemesanan::class, 'booking']);
+$routes->match(['get', 'post'], '/profil', [Home::class, 'profil']);
 
 
 
