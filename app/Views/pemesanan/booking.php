@@ -101,6 +101,7 @@
                                             <option value="2 Year">2 Year</option>
                                         </select>
                                     </div>
+                                    <input type="hidden" value="<?= esc($kamar->id) ?>" name="room_data">
                                 </div>
                                 <button class="button btn_lg btn_blue btn_full" type="submit" >BOOK A ROOM NOW</button>
                             </form>

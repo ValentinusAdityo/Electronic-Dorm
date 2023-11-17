@@ -11,23 +11,44 @@
         </div>
     </div>
 </div>
-
 <!-- =========== MAIN ========== -->
 <main id="rooms_list">
     <div class="container">
-        <div class="text-center ">
-            <form action="/search" method="post">
-                <?= csrf_field() ?>
-                <input type="text" name="key" placeholder="Masukkan No Kamar" class="form-control "><br>
-                <input type="submit" name="submit" value="Search" class="button btn_yellow upper">
-            </form>
-        </div><br>
+        <div class="row">
+       <!-- FILTER -->
+       <div class="col-md-3">
+                <div class="filter-container">
+                    <h3>Kategori</h3>
+                    <select class="form-select" name="kategori">
+                        <option value="all">Semua Tipe Room</option>
+                        <option value="Double_room">Double Room</option>
+                        <option value="singel_room">Single Room</option>
+                        <option value="ac_room">AC Room</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- SEARCH FORM AND ROOM LIST -->
+            <div class="col-md-9">
+                <div class="text-center">
+                    <form action="/search" method="post">
+                        <?= csrf_field() ?>
+                        <div class="form-group">
+                            <input type="text" name="key" placeholder="Masukkan No Kamar" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" value="Search" class="button btn_yellow upper">
+                        </div>
+                    </form>
+                </div><br>
+
         <!-- ITEM -->
 
         <?php
         $counter = 1;
         $jumKamar = 1;
         foreach ($list as $l) : ?>
+        
 
             <article class="room_list" cl>
                 <div class="row row-flex">
@@ -67,7 +88,18 @@
                 </div>
             </article>
         <?php endforeach ?>
-    </div>
+        
+  
 </main>
-
+<!-- PAGINATION -->
+<div class="text-center mt-4">
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+            <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+            <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+            <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
+                </ul>
+            </nav>
+    </div>
 </div>
