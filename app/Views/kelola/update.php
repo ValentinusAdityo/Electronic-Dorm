@@ -26,26 +26,26 @@
                 <aside class="widget">
                     <div class="vbf">
                         <h2 class="form_title"><i class="fa"></i>Update Kamar</h2>
-                        <form method="post" action="/update" class="inner" enctype="multipart/form-data">
+                        <form method="post" action="/updating" class="inner" enctype="multipart/form-data">
                             <?= csrf_field() ?>
 
                             <div class="form-group">
-                                <input class="form-control" name="idKamar" placeholder="Masukkan ID Kamar" type="text">
+                                <input class="form-control" name="idKamar" placeholder="<?= esc($list->id)?>" type="text" value="<?= esc($list->id)?>" readonly>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" name="namaKamar" placeholder="Masukkan Nama Kamar" type="text">
+                                <input class="form-control" name="namaKamar" placeholder="<?= esc($list->nama)?>" type="text">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" name="deskripsi" placeholder="Masukkan Deskripsi Kamar" type="text">
+                                <input class="form-control" name="deskripsi" placeholder="<?= esc($list->deskripsi)?>" type="text">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" name="fasilitas" placeholder="Masukkan Fasilitas Kamar" type="text">
+                                <input class="form-control" name="fasilitas" placeholder="<?= esc($list->fasilitas)?>" type="text">
                             </div>
                             <div class="form-group">
                                 <input class="form-control" name="gambar" type="file">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" name="harga" placeholder="Masukkan Harga Kamar" type="number">
+                                <input class="form-control" name="harga" placeholder="<?= esc($list->harga)?>" type="number">
                             </div>
                             <button class="button btn_lg btn_blue btn_full" type="button" data-toggle="modal" data-target="#myModal">Update Data
                                 Kamar</button>

@@ -7,7 +7,7 @@ Untuk aktifkan server Code igniter
 ```
 php spark serve
 ```
-Memasukan table ke database, sebelumnya perlu dibuat terlebih dahulu untuk database "ekot" di phpmyadmin
+Memasukan table ke database, sebelumnya perlu dibuat terlebih dahulu untuk database "ekost" di phpmyadmin
 ```
 php spark migrate
 ```

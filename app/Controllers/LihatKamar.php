@@ -10,11 +10,13 @@ class LihatKamar extends BaseController
     {
         $session = session();
         $kamarModel = (new Kamar())->getAllKamarData();
+
         $data = [
             'list' => $kamarModel,
             'title' => 'DreamKost - Rooms List View'
         ];
         if ($session->has('admin')) {
+            helper('form');
             return view('layout/header', $data)
                 . view('layout/navbarAdmin')
                 . view('home/roomsAdmin')

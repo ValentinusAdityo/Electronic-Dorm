@@ -43,12 +43,12 @@ class Home extends BaseController
         $session = session();
 
         if ($session->has('admin')) {
-            return view('layout/header', $data) . view('layout/navbarAdmin') . view('home/profil') . view('layout/footer');
+            return view('layout/header', $data) . view('layout/navbarAdmin') . view('home/home') . view('layout/footer');
         }
         if ($session->has('user')) {
             return view('layout/header', $data) . view('layout/navbarUser') . view('home/profil') . view('layout/footer');
         } else {
-            return view('layout/header', $data) . view('layout/navbarGuest') . view('home/profil') . view('layout/footer');
+            return view('layout/header', $data) . view('layout/navbarGuest') . view('home/login') . view('layout/footer');
         }
     }
 }

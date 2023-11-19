@@ -49,17 +49,19 @@ $routes->match(['get', 'post'], '/about', [Home::class, 'about']);
 $routes->match(['get', 'post'], '/login/check', [LoginController::class, 'check']);
 $routes->match(['get', 'post'], '/logout', [LoginController::class, 'logout']);
 $routes->match(['get', 'post'], '/input', [KelolaKamar::class, 'input']);
-$routes->match(['get', 'post'], '/update', [KelolaKamar::class, 'update']);
-$routes->match(['get', 'post'], '/delete', [KelolaKamar::class, 'delete']);
+$routes->match(['get', 'post'], '/update', [KelolaKamar::class, 'updateView']);
+$routes->match(['get', 'post'], '/updating', [KelolaKamar::class, 'update']);
+$routes->match(['get', 'post'], '/delete/(:segment)', [KelolaKamar::class, 'delete']);
 $routes->match(['get', 'post'], '/rooms', [LihatKamar::class, 'showAll']);
 $routes->match(['get', 'post'], '/search', [LihatKamar::class, 'search']);
 $routes->match(['get', 'post'], '/payment', [Transaksi::class, 'pembayaran']);
 $routes->match(['get', 'post'], '/paymentconfirm', [Transaksi::class, 'konfirmasiPembayaran']);
+$routes->match(['get', 'post'], '/profil', [Home::class, 'profil']);
 // $routes->match(['get', 'post'], '/booking', [KelolaKamar::class, 'delete']);
 $routes->match(['get', 'post'], '/bills', [DataTagihan::class, 'tagihan']);
 $routes->match(['get', 'post'], '/billsUser', [DataTagihan::class, 'tagihanUser']);
 $routes->match(['get', 'post'], '/(:segment)', [Pemesanan::class, 'booking']);
-$routes->match(['get', 'post'], '/profil', [Home::class, 'profil']);
+
 
 
 

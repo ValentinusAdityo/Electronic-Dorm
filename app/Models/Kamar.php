@@ -135,7 +135,7 @@ class Kamar extends Model
     {
         if ($this->validation()) {
             try {
-                $this->db->table($this->table)->where('id', $id)->update($this->data);
+                $result = $this->db->table($this->table)->where('id', $id)->update($this->data);
                 $updatedData = $this->db->table($this->table)->where('id', $id)->get()->getRow();
                 return $updatedData;
             } catch (\Throwable $th) {
