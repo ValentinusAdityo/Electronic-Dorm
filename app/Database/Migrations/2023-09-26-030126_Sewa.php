@@ -15,7 +15,6 @@ class Sewa extends Migration
             'masa_berlaku'    => ['type' => 'datetime'],
             'id_pelanggan' => ['type' => 'int', 'constraint' => 9],
             'id_kamar' => ['type' => 'int', 'constraint' => 9],
-            'id_admin' => ['type' => 'int', 'constraint' => 9],
             'created_at' => ['type' => 'datetime', 'null' => true],
             'updated_at' => ['type' => 'datetime', 'null' => true],
             'deleted_at' => ['type' => 'datetime', 'null' => true],
@@ -24,7 +23,6 @@ class Sewa extends Migration
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('id_pelanggan', 'pelanggan', 'id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_kamar', 'kamar', 'id', 'CASCADE', 'CASCADE');
-        $this->forge->addForeignKey('id_admin', 'admin', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('sewa');
     }
 

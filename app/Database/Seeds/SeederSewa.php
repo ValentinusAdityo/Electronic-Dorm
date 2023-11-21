@@ -16,8 +16,6 @@ class SeederSewa extends Seeder
             $queryPelanggan = $pelanggan->orderBy('RAND()'); // Use 'orderBy' to order randomly
             $kamar = $db->table('kamar');
             $queryKamar = $kamar->orderBy('RAND()');
-            $admin = $db->table('admin');
-            $queryAdmin = $admin->orderBy('RAND()');
 
             $faker = \Faker\Factory::create();
             $data = [
@@ -26,7 +24,6 @@ class SeederSewa extends Seeder
                 'masa_berlaku' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)->format('Y-m-d H:i:s'),
                 'id_pelanggan' => $queryPelanggan->get()->getRow()->id,
                 'id_kamar' => $queryKamar->get()->getRow()->id,
-                'id_admin' => $queryAdmin->get()->getRow()->id,
             ];
             $this->db->table('sewa')->insert($data);
         }
