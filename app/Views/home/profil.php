@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
+<!-- =========== PAGE TITLE ========== -->
+<div class="page_title" style="background:  linear-gradient(45deg, rgba(9,64,103, 1),
+              rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
+    <div class="container">
+        <div class="inner">
+            <h1>Profilku</h1>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Profilku</li>
+            </ol>
+        </div>
+    </div>
+</div>
 
 <head>
     <title>Biodata Diri</title>
     <link rel="stylesheet" type="text/css" href="profil.css" />
 </head>
 
+
 <body>
     <div class="container">
-        <h1>Biodata Diri</h1>
-        <img src="adit.jpg" alt="Foto Diri" />
         <div class="info">
-            <h2>Data Pribadi</h2>
-            <p>Nama Lengkap: John Doe</p>
-            <p>Tempat, Tanggal Lahir: Jakarta, 1 Januari 1990</p>
-            <p>Alamat: Jl. Jend. Sudirman No. 1, Jakarta</p>
-            <p>Email: johndoe@email.com</p>
-            <p>Telepon: 08123456789</p>
-            <h2>Pendidikan</h2>
-            <ul>
-                <li>SMA Negeri 1 Jakarta (2008-2011)</li>
-                <li>Universitas Indonesia, Teknik Informatika (2011-2015)</li>
-            </ul>
-            <h2>Pengalaman Kerja</h2>
-            <ol>
-                <li>PT ABC, Programmer (2015-2017)</li>
-                <li>PT XYZ, Web Developer (2017-sekarang)</li>
-            </ol>
+            <br>
+            <h1>Data Pribadi</h1>
+            <?php $session = session() ?>
+            <p>Nama Lengkap: <?= $session->user; ?></p>
+            <p>Alamat: <?= $session->alamat; ?></p>
+            <p>Email: <?= $session->email; ?></p>
+            <p>Telepon: <?= $session->no_hp; ?></p>
+            <br>
+            <h1>Keamanan</h1>
+            <a href="/reset">Reset Password</a>
+            <br>
+            <h1>Kamar Yang Disewa</h1>
         </div>
     </div>
 </body>

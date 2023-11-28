@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/dreamkostlogo.png" width= "90" height="60" alt="Logo" />
+                    <img src="images/dreamkostlogo.png" width="90" height="60" alt="Logo" />
                 </a>
             </div>
             <nav id="main_menu" class="mobile_menu navbar-collapse">
@@ -21,13 +21,6 @@
                     </li>
                     <li>
                         <a href="/rooms">KAMAR</a>
-                    </li>
-                    <li class="dropdown simple_menu"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">Dashboard <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/bills">Data Tagihan</a></li>
-                            <li><a href="/rooms">Pemesanan Kamar</a></li>
-                            <li><a href="/payment">Pembayaran</a></li>
-                        </ul>
                     </li>
                     <li><a href="/about">TENTANG KAMI</a></li>
                     <li><a href="/profil">PROFILKU</a></li>
