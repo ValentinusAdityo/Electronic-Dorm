@@ -69,7 +69,7 @@
             </tbody>
         </table>
         <div class="text-right">
-            <button class="button btn_lg btn_grey" type="button">Batal</button>
+            <a href="/rooms" class="button btn_lg btn_grey">Batal</a>
             <button class="button btn_lg btn_yellow" type="button">Bayar Sekarang</button>
         </div>
     </div>

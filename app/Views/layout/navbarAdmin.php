@@ -28,13 +28,6 @@
                             <li><a href="/paymentconfirm">Pembayaran</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown simple_menu"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">Kelola <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/input">Tambah Kamar</a></li>
-                            <li><a href="/update">Update Kamar</a></li>
-                            <li><a href="/delete">Hapus Kamar</a></li>
-                        </ul>
-                    </li>
                     <li class="menu_button">
                         <a href="/logout" class="button btn_blue">Sign Out</a>
                     </li>
