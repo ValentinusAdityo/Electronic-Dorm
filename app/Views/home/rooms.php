@@ -1,3 +1,5 @@
+
+</style>
 <!-- =========== PAGE TITLE ========== -->
 <div class="page_title" style="background: linear-gradient(45deg, rgba(9,64,103, 1),
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
@@ -14,33 +16,27 @@
 <!-- =========== MAIN ========== -->
 <main id="rooms_list">
     <div class="container">
-        <div class="row">
-       <!-- FILTER -->
-       <div class="col-md-3">
+        <div class="row justify-content-center">
+            <!-- KATEGORI -->
+            <div class="col-md-3">
                 <div class="filter-container">
                     <h3>Kategori</h3>
-                    <select class="form-select" name="kategori">
-                        <option value="all">Semua Tipe Room</option>
-                        <option value="Double_room">Double Room</option>
-                        <option value="singel_room">Single Room</option>
-                        <option value="ac_room">AC Room</option>
-                    </select>
                 </div>
             </div>
+            <div class="col-md-3 text-center">
+                <select class="form-select" name="kategori">
+                    <option value="all">Harga Room</option>
+                    <option value="mulai5">Mulai Rp 500.000</option>
+                    <option value="mulai10">Mulai Rp 1000.000</option>
+                </select>
+            </div>
 
-            <!-- SEARCH FORM AND ROOM LIST -->
-            <div class="col-md-9">
-                <div class="text-center">
-                    <form action="/search" method="post">
-                        <?= csrf_field() ?>
-                        <div class="form-group">
-                            <input type="text" name="key" placeholder="Masukkan No Kamar" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" value="Search" class="button btn_yellow upper">
-                        </div>
-                    </form>
-                </div><br>
+
+                <!-- Add your room list content here -->
+            </div>
+        </div>
+    </div>
+</main>
 
         <!-- ITEM -->
 
