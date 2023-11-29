@@ -1,5 +1,5 @@
 
-</style>
+
 <!-- =========== PAGE TITLE ========== -->
 <div class="page_title" style="background: linear-gradient(45deg, rgba(9,64,103, 1),
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
@@ -16,12 +16,12 @@
 <!-- =========== MAIN ========== -->
 <main id="rooms_list">
     <div class="container">
-        <div class="row justify-content-center">
-            <!-- KATEGORI -->
-            <div class="col-md-3">
-                <div class="filter-container">
+    <div class="row">
+    <!-- KATEGORI -->
+             <div class="col-md-4">
+                <div class="text-center">
                     <h3>Kategori</h3>
-                </div>
+                    </div>
             </div>
             <div class="col-md-3 text-center">
                 <select class="form-select" name="kategori">
@@ -29,23 +29,24 @@
                     <option value="mulai5">Mulai Rp 500.000</option>
                     <option value="mulai10">Mulai Rp 1000.000</option>
                 </select>
-            </div>
+                </div>
+                    </form>
+                </div><br>
+
+   
+
+     
+ 
+<!-- ITEM -->
 
 
-                <!-- Add your room list content here -->
-            </div>
-        </div>
-    </div>
-</main>
 
-        <!-- ITEM -->
-
-        <?php
+<?php
         $counter = 1;
         $jumKamar = 1;
         foreach ($list as $l) : ?>
         
-
+    
             <article class="room_list" cl>
                 <div class="row row-flex">
                     <div class="col-lg-4 col-md-5 col-sm-12">
@@ -85,7 +86,7 @@
             </article>
         <?php endforeach ?>
         
-  
+        
 </main>
 <!-- PAGINATION -->
 <div class="text-center mt-4">
