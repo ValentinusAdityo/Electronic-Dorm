@@ -75,8 +75,9 @@
                                     <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
                                     <small class="upper"> per Bulan </small>
                                     <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Pesan Sekarang</a>
-                                    <?php if ($jumKamar == 10) break;  ?>
+                                    
                                     <?php $jumKamar++ ?>
+                                    <?php if ($jumKamar > 5) break;  ?>
                                 </div>
                             </div>
                         </div>
@@ -88,14 +89,84 @@
         
 </main>
 <!-- PAGINATION -->
-<div class="text-center mt-4">
+<div id="roomContainer"></div>
+<div id="paginationContainer" class="text-center mt-4">
     <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-            <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
-            <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
-            <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
-                </ul>
-            </nav>
-    </div>
+        <ul id="pagination" class="pagination justify-content-center">
+            <!-- Tombol Pagination akan ditambahkan secara dinamis di sini -->
+        </ul>
+    </nav>
 </div>
+ 
+<script>
+   <?php
+$counter = 1;
+$jumKamar = 1;
+$jumlahKamar = count($list); // Anggap $list adalah array kamar Anda
+$kamarPerHalaman = 5;
+$halamanSaatIni = 1;
+?>
+// Mengganti data contoh dengan data sesungguhnya
+const jumlahKamar = <?= $jumlahKamar ?>;
+const kamarPerHalaman = <?= $kamarPerHalaman ?>;
+let halamanSaatIni = <?= $halamanSaatIni ?>;
+
+    // Fungsi untuk membuat kamar dan tombol
+    function generateRoomsAndPagination() {
+    const containerKamar = document.getElementById('roomContainer');
+    const containerPagination = document.getElementById('pagination');
+    containerKamar.innerHTML = ''; // Hapus kamar yang sudah ada
+    containerPagination.innerHTML = ''; // Hapus tombol yang sudah ada
+
+    const jumlahTombol = Math.ceil(jumlahKamar / kamarPerHalaman);
+    for (let i = 1; i <= jumlahTombol; i++) {
+        const elemenTombol = document.createElement('li');
+        elemenTombol.className = 'page-item';
+        const elemenLink = document.createElement('a');
+        elemenLink.className = 'page-link';
+        elemenLink.href = `javascript:void(0);`;
+        elemenLink.textContent = i;
+        elemenLink.addEventListener('click', () => tampilkanKamar(i));
+        elemenTombol.appendChild(elemenLink);
+        containerPagination.appendChild(elemenTombol);
+    }
+
+    tampilkanKamar(halamanSaatIni);
+}
+
+// Fungsi untuk menampilkan kamar-kamar tertentu berdasarkan klik tombol
+function tampilkanKamar(nomorTombol) {
+    const containerKamar = document.getElementById('roomContainer');
+    const tombolTombol = document.querySelectorAll('#pagination li');
+
+    halamanSaatIni = nomorTombol;
+    counter = (halamanSaatIni - 1) * kamarPerHalaman + 1; // Reset nomor kamar pada setiap halaman
+
+    tombolTombol.forEach((tombol, indeks) => {
+        if (indeks + 1 === halamanSaatIni) {
+            tombol.classList.add('active');
+        } else {
+            tombol.classList.remove('active');
+        }
+    });
+
+    const kamarAwal = (halamanSaatIni - 1) * kamarPerHalaman;
+    const kamarAkhir = halamanSaatIni * kamarPerHalaman;
+
+    containerKamar.childNodes.forEach((kamar, indeks) => {
+        if (indeks >= kamarAwal && indeks < kamarAkhir) {
+            if (kamar) {
+                kamar.style.display = 'block';
+                kamar.querySelector('.room_desc h5').textContent = `No: ${counter}`;
+                counter++;
+            }
+        } else {
+            if (kamar) {
+                kamar.style.display = 'none';
+            }
+        }
+    });
+}
+    // Generasi awal
+    generateRoomsAndPagination();
+</script>
