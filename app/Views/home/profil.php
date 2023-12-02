@@ -62,8 +62,8 @@
                     <td><?= esc($l->tanggal_awal) ?></td>
                 </tr>
                 <tr>
-                    <td><strong>Masa Berlaku</strong></td>
-                    <td><?= esc($l->masa_berlaku) ?></td>
+                    <td><strong>Masa Berlaku</strong>&nbsp;&nbsp;</td>
+                    <td><?= esc($l->masa_berlaku) ?> Bulan</td>
                 </tr>
             </table>
             <?php endforeach ?>

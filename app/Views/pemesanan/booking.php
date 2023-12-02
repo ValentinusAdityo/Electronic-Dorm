@@ -96,15 +96,12 @@
                                         <label for="booking-roomdate">Pilih Lama Kost:</label>
                                         <select name="booking-roomdate" class="form-control">
 <<<<<<< Updated upstream
-                                            <option value="1 Month">1 Bulan</option>
-                                            <option value="6 Month">6 Bulan</option>
-                                            <option value="1 Year">1 Tahun</option>
-                                            <option value="2 Year">2 Tahun</option>
+                                        
 =======
-                                            <option value="1 Month">1 Month</option>
-                                            <option value="6 Month">6 Month</option>
-                                            <option value="12 Month">12 Month</option>
-                                            <option value="24 Month">24 Month</option>
+                                            <option value="1 Bulan">1 Bulan</option>
+                                            <option value="6 Bulan">6 Bulan</option>
+                                            <option value="12 Bulan">12 Bulan</option>
+                                            <option value="24 Bulan">24 Bulan</option>
 >>>>>>> Stashed changes
                                         </select>
                                     </div>

@@ -24,13 +24,13 @@ class Transaksi extends BaseController
             return view('layout/header', $data) . view('layout/navbarUser')
                 . view('pemesanan/booking') . view('layout/footer');
         }
-        if($date_end == "1 Month"){
+        if($date_end == "1 Bulan"){
             $total = $kamar->harga * 1;
-        }if($date_end == "6 Month"){
+        }if($date_end == "6 Bulan"){
             $total = $kamar->harga * 6;
-        }if($date_end == "12 Month"){
+        }if($date_end == "12 Bulan"){
             $total = $kamar->harga * 12;
-        }if($date_end == "24 Month"){
+        }if($date_end == "24 Bulan"){
             $total = $kamar->harga * 24;
         }
         if ($session->has('user')) {
