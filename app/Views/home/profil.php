@@ -22,15 +22,33 @@
 
 <body>
     <div class="container">
-        <div class="info">
+        <div class="user-info">
             <br>
             <h1>Data Pribadi</h1>
+            <!-- spasi -->
+        
             <?php $session = session() ?>
-            <p>Nama Lengkap: <?= $session->user; ?></p>
-            <p>Alamat: <?= $session->alamat; ?></p>
-            <p>Email: <?= $session->email; ?></p>
-            <p>Telepon: <?= $session->no_hp; ?></p>
-            <br>
+            <table>
+  
+    <tr>
+        <td><strong>Nama Lengkap  &nbsp;</strong></td>
+        <td><?= $session->user; ?></td>
+    </tr>
+    <tr>
+        <td><strong>Alamat</strong></td>
+        <td><?= $session->alamat; ?></td>
+    </tr>
+    <tr>
+        <td><strong>Email</strong></td>
+        <td><?= $session->email; ?></td>
+    </tr>
+    <tr>
+        <td><strong>Telepon</strong></td>
+        <td><?= $session->no_hp; ?></td>
+    </tr>
+</table>
+<!-- spasi -->
+                <p style="margin:5px; padding:15px;">&nbsp;&nbsp;&nbsp; 
             <h1>Keamanan</h1>
             <a href="/reset">Reset Password</a>
             <br>
