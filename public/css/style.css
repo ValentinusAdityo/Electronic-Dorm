@@ -2441,6 +2441,52 @@ section .main_title {
     -webkit-transition: .2s;
     transition: .2s;
 }
+/* Style for the dropdown container */
+.text-center {
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  /* Style for the select element */
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background: url('path-to-arrow-icon.png') no-repeat right #fff; /* Add a custom arrow icon */
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  
+  /* Style for the dropdown options */
+  .form-select option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Hover effect for the options */
+  .form-select option:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Focus style for better accessibility */
+  .form-select:focus {
+    outline: none;
+    border-color: #007bff; /* Adjust the color as needed */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adjust the shadow as needed */
+  }
+  
+  /* Optional: Add animation for the dropdown */
+  .form-select:hover {
+    transform: scale(1.02); /* Adjust the scale factor as needed */
+    cursor: pointer;
+  }
+  
+  /* Box shadow when clicked */
+  .form-select:active {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Adjust the shadow as needed */
+  }
+  
 
 #features .owl-thumb-item.active {
     background: #333;
@@ -2756,6 +2802,7 @@ section .main_title {
     opacity: 0;
     background: white;
 }
+
 
 /* ---------- 5.7 Testimonials ---------- */
 #testimonials .item {
