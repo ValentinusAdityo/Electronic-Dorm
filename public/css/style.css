@@ -2454,7 +2454,8 @@ section .main_title {
     border: 1px solid #ccc;
     border-radius: 5px;
     appearance: none;
-    background: url('path-to-arrow-icon.png') no-repeat right #fff; /* Add a custom arrow icon */
+    background: url('path-to-arrow-icon.png') no-repeat right 10px center, linear-gradient(to right, #ffffff, #ffffff); /* Add a custom arrow icon */
+    background-size: 20px auto, 100%;
     transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
   
@@ -2486,6 +2487,7 @@ section .main_title {
   .form-select:active {
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Adjust the shadow as needed */
   }
+  
   
 
 #features .owl-thumb-item.active {
