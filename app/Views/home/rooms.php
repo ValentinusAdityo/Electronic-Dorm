@@ -33,12 +33,9 @@
                     </form>
                 </div><br>
 <!-- spasi -->
-                <p style="margin:20px; padding:15px;">&nbsp;&nbsp;&nbsp;         
+                <p style="margin:10px; padding:15px;">&nbsp;&nbsp;&nbsp;         
 
-   
-
-     
- 
+                
 <!-- ITEM -->
 
 

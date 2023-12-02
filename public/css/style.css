@@ -2429,18 +2429,6 @@ section .main_title {
     border-top: none;
     border-left: none;
 }
-
-/* ---------- 5.4 Features ---------- */
-#features .owl-thumb-item {
-    display: block;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 16px;
-    border-radius: 2px;
-    padding: 5px;
-    -webkit-transition: .2s;
-    transition: .2s;
-}
 /* Style for the dropdown container */
 .text-center {
     margin-top: 20px; /* Adjust the margin as needed */
@@ -2456,15 +2444,10 @@ section .main_title {
     appearance: none;
     background: url('path-to-arrow-icon.png') no-repeat right 10px center, linear-gradient(to right, #ffffff, #ffffff); /* Add a custom arrow icon */
     background-size: 20px auto, 100%;
-    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
+    color: #333; /* Initial text color */
   }
-  
-  /* Style for the dropdown options */
-  .form-select option {
-    background-color: #fff;
-    color: #333;
-  }
-  
+
   /* Hover effect for the options */
   .form-select option:hover {
     background-color: #e0e0e0;
@@ -2474,7 +2457,11 @@ section .main_title {
   .form-select:focus {
     outline: none;
     border-color: #007bff; /* Adjust the color as needed */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adjust the shadow as needed */
+  }
+  
+  /* Change text color when dropdown is clicked */
+  .form-select:active {
+    color: navy; /* Text color when clicked */
   }
   
   /* Optional: Add animation for the dropdown */
@@ -2483,13 +2470,17 @@ section .main_title {
     cursor: pointer;
   }
   
-  /* Box shadow when clicked */
-  .form-select:active {
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Adjust the shadow as needed */
-  }
-  
-  
-
+/* ---------- 5.4 Features ---------- */
+#features .owl-thumb-item {
+    display: block;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 16px;
+    border-radius: 2px;
+    padding: 5px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
 #features .owl-thumb-item.active {
     background: #333;
     color: #fff;
