@@ -48,11 +48,25 @@
     </tr>
 </table>
 <!-- spasi -->
-                <p style="margin:5px; padding:15px;">&nbsp;&nbsp;&nbsp; 
-            <h1>Keamanan</h1>
-            <a href="/reset">Reset Password</a>
+                <p style="margin:5px; padding:15px;">&nbsp;&nbsp;&nbsp;
             <br>
             <h1>Kamar Yang Disewa</h1>
+            <?php foreach ($list as $l) : ?>
+            <table>
+                <tr>
+                    <td><strong>Biaya</strong></td>
+                    <td><?= esc($l->biaya) ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Tanggal Awal</strong></td>
+                    <td><?= esc($l->tanggal_awal) ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Masa Berlaku</strong></td>
+                    <td><?= esc($l->masa_berlaku) ?></td>
+                </tr>
+            </table>
+            <?php endforeach ?>
         </div>
     </div>
 </body>

@@ -95,10 +95,17 @@
                                     <div class="form_select">
                                         <label for="booking-roomdate">Pilih Lama Kost:</label>
                                         <select name="booking-roomdate" class="form-control">
+<<<<<<< Updated upstream
                                             <option value="1 Month">1 Bulan</option>
                                             <option value="6 Month">6 Bulan</option>
                                             <option value="1 Year">1 Tahun</option>
                                             <option value="2 Year">2 Tahun</option>
+=======
+                                            <option value="1 Month">1 Month</option>
+                                            <option value="6 Month">6 Month</option>
+                                            <option value="12 Month">12 Month</option>
+                                            <option value="24 Month">24 Month</option>
+>>>>>>> Stashed changes
                                         </select>
                                     </div>
                                     <input type="hidden" value="<?= esc($kamar->id) ?>" name="room_data">

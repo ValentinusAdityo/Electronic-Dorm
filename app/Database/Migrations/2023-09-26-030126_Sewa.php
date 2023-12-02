@@ -12,9 +12,9 @@ class Sewa extends Migration
         $this->forge->addField([
             'biaya'       => ['type' => 'double'],
             'tanggal_awal'      => ['type' => 'datetime'],
-            'masa_berlaku'    => ['type' => 'datetime'],
+            'masa_berlaku'    => ['type' => 'int', 'constraint' => 5],
             'id_pelanggan' => ['type' => 'int', 'constraint' => 9],
-            'id_kamar' => ['type' => 'int', 'constraint' => 9],
+            'id_kamar' => ['type' => 'int', 'constraint' => 2],
             'created_at' => ['type' => 'datetime', 'null' => true],
             'updated_at' => ['type' => 'datetime', 'null' => true],
             'deleted_at' => ['type' => 'datetime', 'null' => true],

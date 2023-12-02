@@ -70,7 +70,13 @@
         </table>
         <div class="text-right">
             <a href="/rooms" class="button btn_lg btn_grey">Batal</a>
-            <button class="button btn_lg btn_yellow" type="button">Bayar Sekarang</button>
+            <form method="post" action="/bayar">
+                <input type="hidden" value="<?= $room_data->id; ?>" name="id_kamar">
+                <input type="hidden" value="<?= $date_start; ?>" name="tanggal_awal">
+                <input type="hidden" value="<?= $date_end; ?>" name="masa_berlaku">
+                <input type="hidden" value="<?= $total; ?>" name="biaya">
+                <button class="button btn_lg btn_yellow" type="submit">Bayar Sekarang</button>
+            </form>
         </div>
     </div>
     </div>

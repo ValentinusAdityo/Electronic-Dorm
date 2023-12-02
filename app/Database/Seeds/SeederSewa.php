@@ -21,7 +21,7 @@ class SeederSewa extends Seeder
             $data = [
                 'biaya' => $faker->randomNumber(2)*10000, 
                 'tanggal_awal' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)->format('Y-m-d H:i:s'),
-                'masa_berlaku' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)->format('Y-m-d H:i:s'),
+                'masa_berlaku' => $faker->numberBetween(1,2),
                 'id_pelanggan' => $queryPelanggan->get()->getRow()->id,
                 'id_kamar' => $queryKamar->get()->getRow()->id,
             ];

@@ -46,6 +46,7 @@ class LoginController extends BaseController
 
         if ($pelangganModel) {
             $dataUser = [
+                'id' => $pelangganModel['id'],
                 'user' => $pelangganModel['nama'],
                 'alamat' => $pelangganModel['alamat'],
                 'no_hp' => $pelangganModel['no_hp'],
