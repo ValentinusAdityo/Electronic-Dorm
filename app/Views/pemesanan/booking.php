@@ -16,7 +16,7 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="price">
                         <div class="inner">
-                            Rp<?= esc($kamar->harga) ?><span>monthly</span>
+                            Rp<?= esc($kamar->harga) ?><span>bulanan</span>
                         </div>
                     </div>
                 </div>
@@ -41,14 +41,14 @@
                     </div>
                 </div>
                 <div class="main_title mt50">
-                    <h2>ABOUT <?= esc($kamar->nama) ?></h2>
+                    <h2>TENTANG <?= esc($kamar->nama) ?></h2>
                 </div>
                 <p>
                     <?= esc($kamar->deskripsi) ?>
                 </p>
                 <div class="main_title t_style a_left s_title mt50">
                     <div class="c_inner">
-                        <h2 class="c_title">ROOM SERVICES</h2>
+                        <h2 class="c_title">Fasilitas</h2>
                     </div>
                 </div>
                 <div class="room_facilitys_list">
@@ -84,7 +84,7 @@
                 <div class="sidebar">
                     <aside class="widget">
                         <div class="vbf">
-                            <h2 class="form_title"><i class="fa fa-calendar"></i> BOOK ONLINE </h2>
+                            <h2 class="form_title"><i class="fa fa-calendar"></i> PESAN ONLINE </h2>
 
                             <form class="inner" method="POST" action="/payment">
                                 <div class="form-group">
@@ -95,25 +95,25 @@
                                     <div class="form_select">
                                         <label for="booking-roomdate">Pilih Lama Kost:</label>
                                         <select name="booking-roomdate" class="form-control">
-                                            <option value="1 Month">1 Month</option>
-                                            <option value="6 Month">6 Month</option>
-                                            <option value="1 Year">1 Year</option>
-                                            <option value="2 Year">2 Year</option>
+                                            <option value="1 Month">1 Bulan</option>
+                                            <option value="6 Month">6 Bulan</option>
+                                            <option value="1 Year">1 Tahun</option>
+                                            <option value="2 Year">2 Tahun</option>
                                         </select>
                                     </div>
                                     <input type="hidden" value="<?= esc($kamar->id) ?>" name="room_data">
                                 </div>
-                                <button class="button btn_lg btn_blue btn_full" type="submit" >BOOK A ROOM NOW</button>
+                                <button class="button btn_lg btn_blue btn_full" type="submit" >PESAN KAMAR SEKARANG</button>
                             </form>
 
                         </div>
                     </aside>
                     <aside class="widget">
-                        <h4>NEED HELP?</h4>
+                        <h4>PERLU BANTUAN?</h4>
                         <div class="help">
-                            If you have any question please don't hesitate to contact us
+                        Jika kamu memiliki pertanyaan jangan ragu untuk menghubungi kami
                             <div class="phone"><i class="fa  fa-phone"></i><a href="tel:18475555555"> 1-888-123-4567 </a></div>
-                            <div class="email"><i class="fa  fa-envelope-o "></i><a href="mailto:contact@site.com">contact@site.com</a> or use <a href="contact.html"> contact form</a></div>
+                            <div class="email"><i class="fa  fa-envelope-o "></i><a href="mailto:contact@site.com">contact@site.com</a> or use <a href="contact.html"> formulir kontak</a></div>
                         </div>
                     </aside>
                 </div>
