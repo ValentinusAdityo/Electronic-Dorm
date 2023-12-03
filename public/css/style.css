@@ -2429,7 +2429,47 @@ section .main_title {
     border-top: none;
     border-left: none;
 }
+/* Style for the dropdown container */
+.text-center {
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  /* Style for the select element */
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background: url('path-to-arrow-icon.png') no-repeat right 10px center, linear-gradient(to right, #ffffff, #ffffff); /* Add a custom arrow icon */
+    background-size: 20px auto, 100%;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
+    color: #333; /* Initial text color */
+  }
 
+  /* Hover effect for the options */
+  .form-select option:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Focus style for better accessibility */
+  .form-select:focus {
+    outline: none;
+    border-color: #007bff; /* Adjust the color as needed */
+  }
+  
+  /* Change text color when dropdown is clicked */
+  .form-select:active {
+    color: navy; /* Text color when clicked */
+  }
+  
+  /* Optional: Add animation for the dropdown */
+  .form-select:hover {
+    transform: scale(1.02); /* Adjust the scale factor as needed */
+    cursor: pointer;
+  }
+  
 /* ---------- 5.4 Features ---------- */
 #features .owl-thumb-item {
     display: block;
@@ -2441,7 +2481,6 @@ section .main_title {
     -webkit-transition: .2s;
     transition: .2s;
 }
-
 #features .owl-thumb-item.active {
     background: #333;
     color: #fff;
@@ -2756,6 +2795,7 @@ section .main_title {
     opacity: 0;
     background: white;
 }
+
 
 /* ---------- 5.7 Testimonials ---------- */
 #testimonials .item {
@@ -5123,4 +5163,51 @@ figure:hover .room_list_slider .owl-nav .owl-next {
 
 .block:first-child {
     margin-top: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+
+}
+
+.container {
+    margin-top: 0px;
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2980b9;
 }

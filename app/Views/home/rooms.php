@@ -1,5 +1,5 @@
 
-</style>
+
 <!-- =========== PAGE TITLE ========== -->
 <div class="page_title" style="background: linear-gradient(45deg, rgba(9,64,103, 1),
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
@@ -16,12 +16,12 @@
 <!-- =========== MAIN ========== -->
 <main id="rooms_list">
     <div class="container">
-        <div class="row justify-content-center">
-            <!-- KATEGORI -->
-            <div class="col-md-3">
-                <div class="filter-container">
+    <div class="row">
+    <!-- KATEGORI -->
+             <div class="col-md-4">
+                <div class="text-center">
                     <h3>Kategori</h3>
-                </div>
+                    </div>
             </div>
             <div class="col-md-3 text-center">
                 <select class="form-select" name="kategori">
@@ -29,23 +29,23 @@
                     <option value="mulai5">Mulai Rp 500.000</option>
                     <option value="mulai10">Mulai Rp 1000.000</option>
                 </select>
-            </div>
+                </div>
+                    </form>
+                </div><br>
+<!-- spasi -->
+                <p style="margin:10px; padding:15px;">&nbsp;&nbsp;&nbsp;         
+
+                
+<!-- ITEM -->
 
 
-                <!-- Add your room list content here -->
-            </div>
-        </div>
-    </div>
-</main>
 
-        <!-- ITEM -->
-
-        <?php
+<?php
         $counter = 1;
         $jumKamar = 1;
         foreach ($list as $l) : ?>
         
-
+    
             <article class="room_list" cl>
                 <div class="row row-flex">
                     <div class="col-lg-4 col-md-5 col-sm-12">
@@ -75,8 +75,9 @@
                                     <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
                                     <small class="upper"> per Bulan </small>
                                     <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Pesan Sekarang</a>
-                                    <?php if ($jumKamar == 10) break;  ?>
+                                    
                                     <?php $jumKamar++ ?>
+                                    <?php if ($jumKamar > 5) break;  ?>
                                 </div>
                             </div>
                         </div>
@@ -85,17 +86,87 @@
             </article>
         <?php endforeach ?>
         
-  
+        
 </main>
 <!-- PAGINATION -->
-<div class="text-center mt-4">
+<div id="roomContainer"></div>
+<div id="paginationContainer" class="text-center mt-4">
     <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-            <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
-            <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
-            <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
-                </ul>
-            </nav>
-    </div>
+        <ul id="pagination" class="pagination justify-content-center">
+            <!-- Tombol Pagination akan ditambahkan secara dinamis di sini -->
+        </ul>
+    </nav>
 </div>
+ 
+<script>
+   <?php
+$counter = 1;
+$jumKamar = 1;
+$jumlahKamar = count($list); // Anggap $list adalah array kamar Anda
+$kamarPerHalaman = 5;
+$halamanSaatIni = 1;
+?>
+// Mengganti data contoh dengan data sesungguhnya
+const jumlahKamar = <?= $jumlahKamar ?>;
+const kamarPerHalaman = <?= $kamarPerHalaman ?>;
+let halamanSaatIni = <?= $halamanSaatIni ?>;
+
+    // Fungsi untuk membuat kamar dan tombol
+    function generateRoomsAndPagination() {
+    const containerKamar = document.getElementById('roomContainer');
+    const containerPagination = document.getElementById('pagination');
+    containerKamar.innerHTML = ''; // Hapus kamar yang sudah ada
+    containerPagination.innerHTML = ''; // Hapus tombol yang sudah ada
+
+    const jumlahTombol = Math.ceil(jumlahKamar / kamarPerHalaman);
+    for (let i = 1; i <= jumlahTombol; i++) {
+        const elemenTombol = document.createElement('li');
+        elemenTombol.className = 'page-item';
+        const elemenLink = document.createElement('a');
+        elemenLink.className = 'page-link';
+        elemenLink.href = `javascript:void(0);`;
+        elemenLink.textContent = i;
+        elemenLink.addEventListener('click', () => tampilkanKamar(i));
+        elemenTombol.appendChild(elemenLink);
+        containerPagination.appendChild(elemenTombol);
+    }
+
+    tampilkanKamar(halamanSaatIni);
+}
+
+// Fungsi untuk menampilkan kamar-kamar tertentu berdasarkan klik tombol
+function tampilkanKamar(nomorTombol) {
+    const containerKamar = document.getElementById('roomContainer');
+    const tombolTombol = document.querySelectorAll('#pagination li');
+
+    halamanSaatIni = nomorTombol;
+    counter = (halamanSaatIni - 1) * kamarPerHalaman + 1; // Reset nomor kamar pada setiap halaman
+
+    tombolTombol.forEach((tombol, indeks) => {
+        if (indeks + 1 === halamanSaatIni) {
+            tombol.classList.add('active');
+        } else {
+            tombol.classList.remove('active');
+        }
+    });
+
+    const kamarAwal = (halamanSaatIni - 1) * kamarPerHalaman;
+    const kamarAkhir = halamanSaatIni * kamarPerHalaman;
+
+    containerKamar.childNodes.forEach((kamar, indeks) => {
+        if (indeks >= kamarAwal && indeks < kamarAkhir) {
+            if (kamar) {
+                kamar.style.display = 'block';
+                kamar.querySelector('.room_desc h5').textContent = `No: ${counter}`;
+                counter++;
+            }
+        } else {
+            if (kamar) {
+                kamar.style.display = 'none';
+            }
+        }
+    });
+}
+    // Generasi awal
+    generateRoomsAndPagination();
+</script>

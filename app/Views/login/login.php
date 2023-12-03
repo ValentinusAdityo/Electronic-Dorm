@@ -23,30 +23,36 @@
         }
 
         body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100vw;
             height: 100vh;
-            background: #90b4ce;
+            margin: 0;
+            background: linear-gradient(to right, #0000, #3498db);
         }
 
         .login {
-            min-height: 500px;
-            width: 60%;
-            height: 70vh;
+            width: 80%;
+            height: 85vh;
             position: absolute;
             left: 50%;
             top: 50%;
             display: flex;
-            border-radius: 5px;
+            border-radius: 30px;
+            overflow: hidden;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            ;
-            background-color: #55be9b;
+            background-color: #fff;
         }
 
-        .main-login {
+        .main-login,
+        .banner {
             width: 60%;
             height: 100%;
+            flex: 1;
+            padding: 50px;
             text-align: center;
             border-bottom-left-radius: 5px;
             border-top-left-radius: 5px;
@@ -64,7 +70,9 @@
             }
 
             .main-login h1 {
-                font-size: 25px;
+                font-size: 36px;
+                font-weight: bold;
+                color: #333;
             }
 
             .facebook {
@@ -98,17 +106,19 @@
         }
 
         .main-login h1 {
-            color: #070708;
+            color: #333;
+            font-size: 35px;
+            margin-bottom: 20px;
         }
 
         .put {
             max-width: 300px;
-            width: 60%;
-            height: 40px;
+            width: 65%;
+            height: 45px;
             color: #070708;
             background-color: rgb(234, 234, 234);
             outline: none;
-            border-radius: 3px;
+            border-radius: 10px;
             margin: 0 auto;
             margin: 10px;
             padding-left: 10px;
@@ -131,13 +141,13 @@
         }
 
         .sub {
-            max-width: 310px;
-            width: 62%;
+
+            width: 65%;
             height: 40px;
-            color: #c0c0c0;
-            background-color: rgb(234, 234, 234);
+            color: #fff;
+            background-color: #3498db;
             outline: none;
-            border-radius: 3px;
+            border-radius: 10px;
             margin: 0 auto;
             margin: 10px;
             border: 2px solid transparent;
@@ -152,7 +162,7 @@
         .pass {
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 500;
-            font-size: 15px;
+            font-size: 13px;
             color: #9336B4;
             text-decoration: none;
             display: flex;
@@ -162,13 +172,13 @@
 
         .shw {
             position: absolute;
-            border-radius: 5px;
+            border-radius: 10px;
             z-index: 2;
             border: none;
             cursor: pointer;
             color: #c0c0c0;
             background-color: transparent;
-            transform: translateX(-55px) translateY(22px);
+            transform: translateX(-60px) translateY(23px);
         }
 
         .banner {
@@ -183,9 +193,9 @@
         }
 
         .banner h4 {
-            width: 80%;
+            width: 70%;
             z-index: 100 !important;
-            margin: 0 auto;
+            margin: 30 auto;
             font-family: 'Roboto', sans-serif;
         }
 
@@ -196,7 +206,7 @@
         }
 
         .lines {
-            margin-top: 20px;
+            margin-top: 25px;
             width: 100%;
             display: flex;
             align-items: center;
@@ -205,9 +215,9 @@
         }
 
         .line {
-            width: 50px;
+            width: 60px;
             height: 1px;
-            margin: 5px;
+            margin: 10px;
             background-color: #e5e5e5;
         }
 
@@ -221,15 +231,15 @@
         }
 
         .main-btn {
-            width: 130px;
+            width: 250px;
             padding: 10px;
-            margin-top: 15px;
-            color: aliceblue;
+            margin-top: 20px;
+            color: #fff;
             cursor: pointer;
-            border-radius: 50px;
-            border: 2px solid aliceblue;
-            background-color: #90b4ce;
-            transition: .4s;
+            border-radius: 10px;
+            border: 2px solid #3498db;
+            background-color: transparent;
+            transition: background-color 0.4s, color 0.4s;
         }
 
         .main-btn:hover {
@@ -265,21 +275,22 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             z-index: 1;
             border-top-left-radius: 100%;
             background-color: #3f4c52;
         }
 
         .blob:nth-child(2) {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100px;
             height: 100px;
             z-index: 1;
             border-bottom-right-radius: 100%;
-            background-color: #094067;
+            background-color: #3f4c52;
         }
 
         #btn {
@@ -302,20 +313,20 @@
         <div class="main-login">
         <form action="/login/check" method="post" onsubmit="showLoading()">
                 <?= csrf_field() ?>
-                <h1>Login Page</h1>
+                <h1>Halaman Login</h1>
                 <input class="usr put" name="usr" placeholder="Username" type="text">
                 <br>
                 <input id="pass" name="pwd" class="pss put" placeholder="Password" type="password"><button id="bhde" onclick="show()" class="shw" type="button">show</button>
                 <div id="loading" class="loading-spinner" style="display: none;"></div>
-                <a class="pass" href="">Forgot Password</a>
-                <input value="Login" id="btn" class="sub" type="submit" name="submit">
+                <a class="pass" href="">Lupa Password</a>
+                <input value="Masuk" id="btn" class="sub" type="submit" name="submit">
                 <div class="lines">
                     <div style="background-color: #a5a5a5;" class="line"></div>
-                    <p style="color: #a5a5a5;" class="p-b">or</p>
+                    <p style="color: #a5a5a5;" class="p-b">Belum punya akun?</p>
                     <div style="background-color: #a5a5a5;" class="line"></div>
 
                 </div>
-                <button class="main-btn"> <a href="/register">Sign Up today</a> </button>
+                <button class="main-btn"> <a href="/register">Daftar Sekarang</a> </button>
         </div>
         </form>
         <div class="banner">
@@ -324,7 +335,9 @@
             <div class="contain">
                 <h1>Selamat Datang Sobat DreamKost!</h1>
 
-                <h4>We are happy to have you back, please sign back in to continue</h4>
+                <h4>Kami senang melihat Anda datang kembali, Jangan lupa untuk pesan kamar impian Anda
+                    karena kamar impian semua orang hanya ada di DreamKost tentunya!
+                    Silahkan masuk ke akun Anda untuk melihat kamar dan melanjutkan pemesanan</h4>
 
 
             </div>
@@ -349,7 +362,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             border: 6px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
+            border-radius: 10%;
             border-top: 6px solid #3da9fc;
             width: 60px;
             height: 60px;
