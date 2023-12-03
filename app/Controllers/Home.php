@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Sewa;
+
 class Home extends BaseController
 {
     public function index()
@@ -38,17 +40,16 @@ class Home extends BaseController
     
     public function profil()
     {
-        $data = ['title' => 'About DreamKost'];
-
         $session = session();
 
-        if ($session->has('admin')) {
-            return view('layout/header', $data) . view('layout/navbarAdmin') . view('home/home') . view('layout/footer');
-        }
+        $dataModel = (new Sewa(null, null, null, null, null))->cariSewa($session->get('id'));
+
+        $data = ['title' => 'Profil DreamKost', 'list' => $dataModel];
+
         if ($session->has('user')) {
             return view('layout/header', $data) . view('layout/navbarUser') . view('home/profil') . view('layout/footer');
         } else {
-            return view('layout/header', $data) . view('layout/navbarGuest') . view('home/login') . view('layout/footer');
+            return view('login/login');
         }
     }
 }

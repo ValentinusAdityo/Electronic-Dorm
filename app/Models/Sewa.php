@@ -87,6 +87,24 @@ class Sewa extends Model
     }
 
     public function tambahSewa(){
+        if($this->validation(date('Y-m-d H:i:s'))){
+            try {
+                $this->db->table($this->table)->insert($this->data);
+                return true;
+            }catch (\Exception $e) {
+                // Handle any exceptions here
+                return "An error occurred: " . $e->getMessage();
+            }
+        }
+    }
 
+    public function cariSewa($user_id){
+        try {
+            $result = $this->db->table($this->table)->where('id_pelanggan', $user_id)->get()->getResult();
+            return $result;
+        }catch (\Exception $e) {
+            // Handle any exceptions here
+            return "An error occurred: " . $e->getMessage();
+        }
     }
 }

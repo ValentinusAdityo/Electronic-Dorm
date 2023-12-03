@@ -31,18 +31,22 @@
         }
 
         table {
-            width: 80%;
+            width: 60%;
             margin-top: 10px;
             border-collapse: collapse;
         }
 
         th, td {
-            padding: 15px;
+            padding: 10px;
             text-align: left;
-            border-bottom: 2px solid #ddd;
+            border-radius: 5px;
+            border-bottom: 3px solid #ddd;
+            background-color: #d3d3d3;
+            color: black;
         }
 
         th {
+            border-radius: 5px;
             background-color: #3498db;
             color: white;
         }
@@ -65,7 +69,7 @@
 
         .info h1,
         .info p {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .info p:last-child {
@@ -99,9 +103,33 @@
                     <td><?= $session->no_hp; ?></td>
                 </tr>
             </table>
+            <br>
             <h1>Keamanan</h1>
             <a href="/reset">Reset Password</a>
+    </tr>
+</table>
+<!-- spasi -->
+                <p style="margin:5px; padding:5px;">&nbsp;&nbsp;&nbsp;
+            <br>
+
             <h1>Kamar Yang Disewa</h1>
+            <br>
+            <?php foreach ($list as $l) : ?>
+            <table>
+                <tr>
+                    <td><strong>Biaya</strong></td>
+                    <td><?= esc($l->biaya) ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Tanggal Awal</strong></td>
+                    <td><?= esc($l->tanggal_awal) ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Masa Berlaku</strong>&nbsp;&nbsp;</td>
+                    <td><?= esc($l->masa_berlaku) ?> Bulan</td>
+                </tr>
+            </table>
+            <?php endforeach ?>
         </div>
     </div>
 </body>
