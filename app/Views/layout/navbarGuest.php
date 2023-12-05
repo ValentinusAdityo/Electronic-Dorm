@@ -1,6 +1,6 @@
 <div id="smoothpage" class="wrapper">
 
-    <header>
+    <header class="fixed">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle mobile_menu_btn" data-toggle="collapse" data-target=".mobile_menu" aria-expanded="false">
@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/dreamkostlogo.png" height="60" alt="logo">
+                    <img src="images/dreamkostlogo.png" width="70" height="50" alt="Logo">
                 </a>
             </div>
             <nav id="main_menu" class="mobile_menu navbar-collapse">
