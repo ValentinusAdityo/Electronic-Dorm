@@ -7,7 +7,7 @@
         <div class="inner">
             <h1>Profilku</h1>
             <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Beranda</a></li>
                 <li>Profilku</li>
             </ol>
         </div>
@@ -23,7 +23,7 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        
+
         .info {
             text-align: left;
             color: #333;
@@ -36,7 +36,8 @@
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
             border-radius: 5px;
@@ -75,13 +76,12 @@
         .info p:last-child {
             margin-bottom: 10px;
         }
-
     </style>
 </head>
 
 
 <body>
-<div class="container">
+    <div class="container">
         <div class="info">
             <h1>Data Pribadi</h1>
             <?php $session = session() ?>
@@ -106,29 +106,29 @@
             <br>
             <h1>Keamanan</h1>
             <a href="/reset">Reset Password</a>
-    </tr>
-</table>
-<!-- spasi -->
-                <p style="margin:5px; padding:5px;">&nbsp;&nbsp;&nbsp;
-            <br>
+            </tr>
+            </table>
+            <!-- spasi -->
+            <p style="margin:5px; padding:5px;">&nbsp;&nbsp;&nbsp;
+                <br>
 
             <h1>Kamar Yang Disewa</h1>
             <br>
             <?php foreach ($list as $l) : ?>
-            <table>
-                <tr>
-                    <td><strong>Biaya</strong></td>
-                    <td><?= esc($l->biaya) ?></td>
-                </tr>
-                <tr>
-                    <td><strong>Tanggal Awal</strong></td>
-                    <td><?= esc($l->tanggal_awal) ?></td>
-                </tr>
-                <tr>
-                    <td><strong>Masa Berlaku</strong>&nbsp;&nbsp;</td>
-                    <td><?= esc($l->masa_berlaku) ?> Bulan</td>
-                </tr>
-            </table>
+                <table>
+                    <tr>
+                        <td><strong>Biaya</strong></td>
+                        <td><?= esc($l->biaya) ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tanggal Awal</strong></td>
+                        <td><?= esc($l->tanggal_awal) ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Masa Berlaku</strong>&nbsp;&nbsp;</td>
+                        <td><?= esc($l->masa_berlaku) ?> Bulan</td>
+                    </tr>
+                </table>
             <?php endforeach ?>
         </div>
     </div>

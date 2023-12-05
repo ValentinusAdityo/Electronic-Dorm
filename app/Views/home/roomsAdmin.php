@@ -3,10 +3,10 @@
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
     <div class="container">
         <div class="inner">
-            <h1>Rooms List View</h1>
+            <h1>Daftar Kamar</h1>
             <ol class="breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li>Rooms</li>
+                <li><a href="/">Beranda</a></li>
+                <li>Daftar Kamar</li>
             </ol>
         </div>
     </div>
@@ -89,7 +89,9 @@
                             <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
                                 <h5>No: <?= $counter ?></h5><br>
                                 <?php $counter++; ?>
-                                <h3><p href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </p></h3>
+                                <h3>
+                                    <p href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </p>
+                                </h3>
                                 <p>
                                     <?= esc($l->deskripsi) ?>
                                 </p>
@@ -105,7 +107,7 @@
                                     <small class="upper"> per Bulan </small>
                                     <form action="/update" method="GET">
                                         <?= csrf_field() ?>
-                                        <input type="hidden" name="dataId" value="<?= esc($l->id)?>">
+                                        <input type="hidden" name="dataId" value="<?= esc($l->id) ?>">
                                         <button class="button  btn_blue btn_full upper" type="submit">Edit</button>
                                     </form>
                                     <form action="/delete/<?= esc($l->id) ?>" method="DELETE">
@@ -128,8 +130,8 @@
             <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
             <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
             <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
-                </ul>
-            </nav>
-    </div>
+        </ul>
+    </nav>
+</div>
 
 </div>

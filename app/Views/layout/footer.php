@@ -30,11 +30,11 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 widget">
-                    <h5>Useful Links</h5>
+                    <h5>Link Penting</h5>
                     <ul class="useful_links">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/rooms">Rooms</a></li>
-                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/rooms">Daftar Kamar</a></li>
+                        <li><a href="/about">Tentang Kami</a></li>
                         <li><a href="/login">Sign In</a></li>
                     </ul>
                 </div>
