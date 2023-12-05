@@ -5,7 +5,7 @@
         <div class="inner">
             <h1>Tentang Kami</h1>
             <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Beranda</a></li>
                 <li>Tentang Kami</li>
             </ol>
         </div>
@@ -30,7 +30,7 @@
                             <span class="meta_part"><a href="#"><i class="fa fa-user"></i>Valentinus Adit </a></span>
                             <span class="meta_part"><a href="#"><i class="fa fa-calendar"></i>OKT 25, 2023</a></span>
                             <span class="meta_part"><a href="#"><i class="fa fa-comment-o"></i>89 Comments</a></span>
-                            <span class="meta_part"><i class="fa fa-folder-open-o"></i><a href="#">News</a>, <a href="#">Events</a></span>
+                            <span class="meta_part"><i class="fa fa-folder-open-o"></i><a href="#">Berita</a>, <a href="#">Acara</a></span>
                         </div>
                         <p>Selamat datang di DreamKost!
 

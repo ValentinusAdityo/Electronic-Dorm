@@ -1,14 +1,12 @@
-
-
 <!-- =========== PAGE TITLE ========== -->
 <div class="page_title" style="background: linear-gradient(45deg, rgba(9,64,103, 1),
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
     <div class="container">
         <div class="inner">
-            <h1>Rooms List View</h1>
+            <h1>Daftar Kamar</h1>
             <ol class="breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li>Rooms</li>
+                <li><a href="/">Beranda</a></li>
+                <li>Daftar Kamar</li>
             </ol>
         </div>
     </div>
@@ -16,77 +14,77 @@
 <!-- =========== MAIN ========== -->
 <main id="rooms_list">
     <div class="container">
-    <div class="row">
-    <!-- KATEGORI -->
-             <div class="col-md-4">
+        <div class="row">
+            <!-- KATEGORI -->
+            <div class="col-md-4">
                 <div class="text-center">
                     <h3>Kategori</h3>
-                    </div>
+                </div>
             </div>
             <div class="col-md-3 text-center">
                 <select class="form-select" name="kategori">
-                    <option value="all">Harga Room</option>
+                    <option value="all">Harga Kamar</option>
                     <option value="mulai5">Mulai Rp 500.000</option>
                     <option value="mulai10">Mulai Rp 1000.000</option>
                 </select>
+            </div>
+            </form>
+        </div><br>
+        <!-- spasi -->
+        <p style="margin:10px; padding:15px;">&nbsp;&nbsp;&nbsp;
+
+
+            <!-- ITEM -->
+
+
+
+            <?php
+            $counter = 1;
+            $jumKamar = 1;
+            foreach ($list as $l) : ?>
+
+
+        <article class="room_list" cl>
+            <div class="row row-flex">
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <figure>
+                        <a href="room.html" class="hover_effect h_link h_blue">
+                            <img src="uploads/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
+                        </a>
+                    </figure>
                 </div>
-                    </form>
-                </div><br>
-<!-- spasi -->
-                <p style="margin:10px; padding:15px;">&nbsp;&nbsp;&nbsp;         
-
-                
-<!-- ITEM -->
-
-
-
-<?php
-        $counter = 1;
-        $jumKamar = 1;
-        foreach ($list as $l) : ?>
-        
-    
-            <article class="room_list" cl>
-                <div class="row row-flex">
-                    <div class="col-lg-4 col-md-5 col-sm-12">
-                        <figure>
-                            <a href="room.html" class="hover_effect h_link h_blue">
-                                <img src="uploads/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-lg-8 col-md-7 col-sm-12">
-                        <div class="room_details row-flex">
-                            <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
-                                <h5>No: <?= $counter ?></h5><br>
-                                <?php $counter++; ?>
-                                <h3><a href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </a></h3>
-                                <p>
-                                    <?= esc($l->deskripsi) ?>
-                                </p>
-                                <div class="room_services">
-                                    <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                                    <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
-                                    <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Restaurant"></i>
-                                </div>
+                <div class="col-lg-8 col-md-7 col-sm-12">
+                    <div class="room_details row-flex">
+                        <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
+                            <h5>No: <?= $counter ?></h5><br>
+                            <?php $counter++; ?>
+                            <h3><a href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </a></h3>
+                            <p>
+                                <?= esc($l->deskripsi) ?>
+                            </p>
+                            <div class="room_services">
+                                <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
+                                <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Restaurant"></i>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-12 room_price">
-                                <div class="room_price_inner">
-                                    <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
-                                    <small class="upper"> per Bulan </small>
-                                    <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Pesan Sekarang</a>
-                                    
-                                    <?php $jumKamar++ ?>
-                                    <?php if ($jumKamar > 5) break;  ?>
-                                </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 room_price">
+                            <div class="room_price_inner">
+                                <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
+                                <small class="upper"> per Bulan </small>
+                                <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Pesan Sekarang</a>
+
+                                <?php $jumKamar++ ?>
+                                <?php if ($jumKamar > 5) break;  ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </article>
-        <?php endforeach ?>
-        
-        
+            </div>
+        </article>
+    <?php endforeach ?>
+
+
 </main>
 <!-- PAGINATION -->
 <div id="roomContainer"></div>
@@ -97,76 +95,76 @@
         </ul>
     </nav>
 </div>
- 
+
 <script>
-   <?php
-$counter = 1;
-$jumKamar = 1;
-$jumlahKamar = count($list); // Anggap $list adalah array kamar Anda
-$kamarPerHalaman = 5;
-$halamanSaatIni = 1;
-?>
-// Mengganti data contoh dengan data sesungguhnya
-const jumlahKamar = <?= $jumlahKamar ?>;
-const kamarPerHalaman = <?= $kamarPerHalaman ?>;
-let halamanSaatIni = <?= $halamanSaatIni ?>;
+    <?php
+    $counter = 1;
+    $jumKamar = 1;
+    $jumlahKamar = count($list); // Anggap $list adalah array kamar Anda
+    $kamarPerHalaman = 5;
+    $halamanSaatIni = 1;
+    ?>
+    // Mengganti data contoh dengan data sesungguhnya
+    const jumlahKamar = <?= $jumlahKamar ?>;
+    const kamarPerHalaman = <?= $kamarPerHalaman ?>;
+    let halamanSaatIni = <?= $halamanSaatIni ?>;
 
     // Fungsi untuk membuat kamar dan tombol
     function generateRoomsAndPagination() {
-    const containerKamar = document.getElementById('roomContainer');
-    const containerPagination = document.getElementById('pagination');
-    containerKamar.innerHTML = ''; // Hapus kamar yang sudah ada
-    containerPagination.innerHTML = ''; // Hapus tombol yang sudah ada
+        const containerKamar = document.getElementById('roomContainer');
+        const containerPagination = document.getElementById('pagination');
+        containerKamar.innerHTML = ''; // Hapus kamar yang sudah ada
+        containerPagination.innerHTML = ''; // Hapus tombol yang sudah ada
 
-    const jumlahTombol = Math.ceil(jumlahKamar / kamarPerHalaman);
-    for (let i = 1; i <= jumlahTombol; i++) {
-        const elemenTombol = document.createElement('li');
-        elemenTombol.className = 'page-item';
-        const elemenLink = document.createElement('a');
-        elemenLink.className = 'page-link';
-        elemenLink.href = `javascript:void(0);`;
-        elemenLink.textContent = i;
-        elemenLink.addEventListener('click', () => tampilkanKamar(i));
-        elemenTombol.appendChild(elemenLink);
-        containerPagination.appendChild(elemenTombol);
+        const jumlahTombol = Math.ceil(jumlahKamar / kamarPerHalaman);
+        for (let i = 1; i <= jumlahTombol; i++) {
+            const elemenTombol = document.createElement('li');
+            elemenTombol.className = 'page-item';
+            const elemenLink = document.createElement('a');
+            elemenLink.className = 'page-link';
+            elemenLink.href = `javascript:void(0);`;
+            elemenLink.textContent = i;
+            elemenLink.addEventListener('click', () => tampilkanKamar(i));
+            elemenTombol.appendChild(elemenLink);
+            containerPagination.appendChild(elemenTombol);
+        }
+
+        tampilkanKamar(halamanSaatIni);
     }
 
-    tampilkanKamar(halamanSaatIni);
-}
+    // Fungsi untuk menampilkan kamar-kamar tertentu berdasarkan klik tombol
+    function tampilkanKamar(nomorTombol) {
+        const containerKamar = document.getElementById('roomContainer');
+        const tombolTombol = document.querySelectorAll('#pagination li');
 
-// Fungsi untuk menampilkan kamar-kamar tertentu berdasarkan klik tombol
-function tampilkanKamar(nomorTombol) {
-    const containerKamar = document.getElementById('roomContainer');
-    const tombolTombol = document.querySelectorAll('#pagination li');
+        halamanSaatIni = nomorTombol;
+        counter = (halamanSaatIni - 1) * kamarPerHalaman + 1; // Reset nomor kamar pada setiap halaman
 
-    halamanSaatIni = nomorTombol;
-    counter = (halamanSaatIni - 1) * kamarPerHalaman + 1; // Reset nomor kamar pada setiap halaman
-
-    tombolTombol.forEach((tombol, indeks) => {
-        if (indeks + 1 === halamanSaatIni) {
-            tombol.classList.add('active');
-        } else {
-            tombol.classList.remove('active');
-        }
-    });
-
-    const kamarAwal = (halamanSaatIni - 1) * kamarPerHalaman;
-    const kamarAkhir = halamanSaatIni * kamarPerHalaman;
-
-    containerKamar.childNodes.forEach((kamar, indeks) => {
-        if (indeks >= kamarAwal && indeks < kamarAkhir) {
-            if (kamar) {
-                kamar.style.display = 'block';
-                kamar.querySelector('.room_desc h5').textContent = `No: ${counter}`;
-                counter++;
+        tombolTombol.forEach((tombol, indeks) => {
+            if (indeks + 1 === halamanSaatIni) {
+                tombol.classList.add('active');
+            } else {
+                tombol.classList.remove('active');
             }
-        } else {
-            if (kamar) {
-                kamar.style.display = 'none';
+        });
+
+        const kamarAwal = (halamanSaatIni - 1) * kamarPerHalaman;
+        const kamarAkhir = halamanSaatIni * kamarPerHalaman;
+
+        containerKamar.childNodes.forEach((kamar, indeks) => {
+            if (indeks >= kamarAwal && indeks < kamarAkhir) {
+                if (kamar) {
+                    kamar.style.display = 'block';
+                    kamar.querySelector('.room_desc h5').textContent = `No: ${counter}`;
+                    counter++;
+                }
+            } else {
+                if (kamar) {
+                    kamar.style.display = 'none';
+                }
             }
-        }
-    });
-}
+        });
+    }
     // Generasi awal
     generateRoomsAndPagination();
 </script>

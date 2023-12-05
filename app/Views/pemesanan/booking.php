@@ -8,8 +8,8 @@
 
                     <h1><?= esc($kamar->nama) ?></h1>
                     <ol class="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/rooms">Daftar Kamar</a></li>
                         <li><?= esc($kamar->nama) ?></li>
                     </ol>
                 </div>
@@ -95,19 +95,16 @@
                                     <div class="form_select">
                                         <label for="booking-roomdate">Pilih Lama Kost:</label>
                                         <select name="booking-roomdate" class="form-control">
-<<<<<<< Updated upstream
-                                        
-=======
-                                            <option value="1 Bulan">1 Bulan</option>
-                                            <option value="6 Bulan">6 Bulan</option>
-                                            <option value="12 Bulan">12 Bulan</option>
-                                            <option value="24 Bulan">24 Bulan</option>
->>>>>>> Stashed changes
+                                            <<<<<<< Updated upstream=======<option value="1 Bulan">1 Bulan</option>
+                                                <option value="6 Bulan">6 Bulan</option>
+                                                <option value="12 Bulan">12 Bulan</option>
+                                                <option value="24 Bulan">24 Bulan</option>
+                                                >>>>>>> Stashed changes
                                         </select>
                                     </div>
                                     <input type="hidden" value="<?= esc($kamar->id) ?>" name="room_data">
                                 </div>
-                                <button class="button btn_lg btn_blue btn_full" type="submit" >PESAN KAMAR SEKARANG</button>
+                                <button class="button btn_lg btn_blue btn_full" type="submit">PESAN KAMAR SEKARANG</button>
                             </form>
 
                         </div>
@@ -115,7 +112,7 @@
                     <aside class="widget">
                         <h4>PERLU BANTUAN?</h4>
                         <div class="help">
-                        Jika kamu memiliki pertanyaan jangan ragu untuk menghubungi kami
+                            Jika kamu memiliki pertanyaan jangan ragu untuk menghubungi kami
                             <div class="phone"><i class="fa  fa-phone"></i><a href="tel:18475555555"> 1-888-123-4567 </a></div>
                             <div class="email"><i class="fa  fa-envelope-o "></i><a href="mailto:contact@site.com">contact@site.com</a> or use <a href="contact.html"> formulir kontak</a></div>
                         </div>
