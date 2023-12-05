@@ -13,7 +13,7 @@ class LihatKamar extends BaseController
 
         $data = [
             'list' => $kamarModel,
-            'title' => 'DreamKost - Rooms List View'
+            'title' => 'DreamKost - Daftar Kamar'
         ];
         if ($session->has('admin')) {
             helper('form');
