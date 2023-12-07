@@ -107,4 +107,19 @@ class Sewa extends Model
             return "An error occurred: " . $e->getMessage();
         }
     }
+
+    public function getAll(){
+        try {
+            $result = $this->db->table($this->table)->get();
+
+            if ($result->getNumRows() > 0) {
+                return $result->getResult();
+            } else {
+                return "No records found";
+            }
+        } catch (\Exception $e) {
+            // Handle any exceptions here
+            return "An error occurred: " . $e->getMessage();
+        }
+    }
 }

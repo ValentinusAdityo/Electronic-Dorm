@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Kamar;
+use App\Models\Sewa;
 
 class LihatKamar extends BaseController
 {
@@ -58,6 +59,22 @@ class LihatKamar extends BaseController
             return view('layout/header', $data)
                 . view('layout/navbarGuest')
                 . view('home/search')
+                . view('layout/footer');
+        }
+    }
+    public function listrental(){
+        $session = session();
+        $sewa = (new Sewa(null, null, null, null, null))->getAll();
+        $data = ['sewa' => $sewa, 'title' => 'Daftar Sewa'];
+        if($session->has('admin')){
+            return view('layout/header', $data)
+                . view('layout/navbarAdmin')
+                . view('daftarSewa/daftar')
+                . view('layout/footer');
+        }else{
+            return view('layout/header', $data)
+                . view('layout/navbarAdmin')
+                . view('home/home')
                 . view('layout/footer');
         }
     }

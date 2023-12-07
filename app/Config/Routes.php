@@ -58,6 +58,7 @@ $routes->match(['get', 'post'], '/payment', [Transaksi::class, 'pembayaran']);
 $routes->match(['get', 'post'], '/bayar', [Transaksi::class, 'nota']);
 $routes->match(['get', 'post'], '/paymentconfirm', [Transaksi::class, 'konfirmasiPembayaran']);
 $routes->match(['get', 'post'], '/profil', [Home::class, 'profil']);
+$routes->match(['get', 'post'], '/listrental', [LihatKamar::class, 'listrental']);
 // $routes->match(['get', 'post'], '/booking', [KelolaKamar::class, 'delete']);
 $routes->match(['get', 'post'], '/bills', [DataTagihan::class, 'tagihan']);
 $routes->match(['get', 'post'], '/billsUser', [DataTagihan::class, 'tagihanUser']);

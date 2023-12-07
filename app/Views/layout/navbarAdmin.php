@@ -21,12 +21,8 @@
                     <li>
                         <a href="/rooms">KAMAR</a>
                     </li>
-                    <li class="dropdown simple_menu"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">Dashboard <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/bills">Data Tagihan</a></li>
-                            <li><a href="/rooms">Pemesanan Kamar</a></li>
-                            <li><a href="/paymentconfirm">Pembayaran</a></li>
-                        </ul>
+                    <li>
+                        <a href="/listrental" >DAFTAR SEWA</a>
                     </li>
                     <li class="menu_button">
                         <a href="/logout" class="button btn_blue">Sign Out</a>
