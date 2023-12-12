@@ -69,71 +69,69 @@
                 <input type="submit" name="submit" value="Search" class="button btn_yellow upper">
             </form>
         </div><br>
+        <!-- ITEM -->
+
         <?php
-// Menentukan jumlah item per halaman
-$itemPerPage = 5;
+        $counter = 1;
+        foreach ($list as $l) : ?>
 
-// Menghitung total item
-$totalItems = count($list);
-
-// Menghitung total halaman
-$totalPages = ceil($totalItems / $itemPerPage);
-
-// Mendapatkan halaman saat ini dari URL
-$currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-
-// Menghitung item awal dan akhir untuk halaman saat ini
-$startIndex = ($currentPage - 1) * $itemPerPage;
-$endIndex = $startIndex + $itemPerPage - 1;
-
-// Menampilkan item pada halaman saat ini
-for ($i = $startIndex; $i <= $endIndex && $i < $totalItems; $i++) :
-    $l = $list[$i];
-?>
-    <article class="room_list" cl>
-        <!-- Konten item kamar -->
-        <div class="row row-flex">
-            <div class="col-lg-4 col-md-5 col-sm-12">
-                <figure>
-                    <a href="room.html" class="hover_effect h_link h_blue">
-                        <img src="uploads/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
-                    </a>
-                </figure>
-            </div>
-            <div class="col-lg-8 col-md-7 col-sm-12">
-                <div class="room_details row-flex">
-                    <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
-                        <h5>No: <?= $i + 1 ?></h5><br>
-                        <h3><a href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </a></h3>
-                        <p><?= esc($l->deskripsi) ?></p>
-                        <div class="room_services">
-                            <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                            <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
-                            <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Restaurant"></i>
-                        </div>
+            <article class="room_list" cl>
+                <div class="row row-flex">
+                    <div class="col-lg-4 col-md-5 col-sm-12">
+                        <figure>
+                            <p href="room.html" class="hover_effect h_link h_blue">
+                                <img src="uploads/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
+                            </p>
+                        </figure>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12 room_price">
-                        <div class="room_price_inner">
-                            <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
-                            <small class="upper"> per Bulan </small>
-                            <a href="/<?= esc($l->id) ?>" class="button  btn_blue btn_full upper">Pesan Sekarang</a>
+                    <div class="col-lg-8 col-md-7 col-sm-12">
+                        <div class="room_details row-flex">
+                            <div class="col-md-9 col-sm-9 col-xs-12 room_desc">
+                                <h5>No: <?= $counter ?></h5><br>
+                                <?php $counter++; ?>
+                                <h3>
+                                    <p href="/<?= esc($l->id) ?>"> Kamar <?= esc($l->nama) ?> </p>
+                                </h3>
+                                <p>
+                                    <?= esc($l->deskripsi) ?>
+                                </p>
+                                <div class="room_services">
+                                    <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
+                                    <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable Channel" data-original-title="Plasma TV"></i>
+                                    <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Restaurant"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-12 room_price">
+                                <div class="room_price_inner">
+                                    <span class="room_price_number"> Rp<?= number_format(esc($l->harga), 0, "", ".") ?> </span>
+                                    <small class="upper"> per Bulan </small>
+                                    <form action="/update" method="GET">
+                                        <?= csrf_field() ?>
+                                        <input type="hidden" name="dataId" value="<?= esc($l->id) ?>">
+                                        <button class="button  btn_blue btn_full upper" type="submit">Edit</button>
+                                    </form>
+                                    <form action="/delete/<?= esc($l->id) ?>" method="DELETE">
+                                        <button class="button  btn_blue btn_full upper" type="submit">Hapus</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </article>
-<?php endfor; ?>
-
-<!-- Menampilkan tombol pagination -->
-<div id="paginationContainer" class="text-center mt-4">
+            </article>
+        <?php endforeach ?>
+    </div>
+</main>
+<!-- PAGINATION -->
+<div class="text-center mt-4">
     <nav aria-label="Page navigation">
-        <ul id="pagination" class="pagination justify-content-center">
-            <?php for ($page = 1; $page <= $totalPages; $page++) : ?>
-                <li class="page-item <?= $page == $currentPage ? 'active' : '' ?>">
-                    <a class="page-link" href="?page=<?= $page ?>"><?= $page ?></a>
-                </li>
-            <?php endfor; ?>
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+            <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+            <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+            <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
         </ul>
     </nav>
+</div>
+
 </div>
