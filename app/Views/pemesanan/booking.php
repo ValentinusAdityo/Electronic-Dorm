@@ -35,7 +35,7 @@
                         <!-- ITEM -->
                         <div class="item lightbox-image-icon">
                             <a href="images/rooms/<?= esc($kamar->gambar) ?>" class="hover_effect h_lightbox h_blue">
-                                <img class="img-responsive" src="images/rooms/<?= esc($kamar->gambar) ?>" alt="Image">
+                                <img class="img-responsive" src="uploads/<?= esc($kamar->gambar) ?>" alt="Image">
                             </a>
                         </div>
                     </div>
