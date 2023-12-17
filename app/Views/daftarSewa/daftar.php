@@ -33,7 +33,7 @@
         }
 
         th {
-            background-color: #007bff; /* Warna biru background header */
+            background-color: #094067; /* Warna biru background header */
             color: white;
         }
 
