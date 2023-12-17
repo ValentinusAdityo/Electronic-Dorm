@@ -13,7 +13,7 @@
                         <li><?= esc($kamar->nama) ?></li>
                     </ol>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-5 col-sm-6">
                     <div class="price">
                         <div class="inner">
                             Rp<?= esc($kamar->harga) ?><span>bulanan</span>
@@ -34,8 +34,8 @@
                     <div id="slider-larg" class="owl-carousel image-gallery">
                         <!-- ITEM -->
                         <div class="item lightbox-image-icon">
-                            <a href="images/rooms/<?= esc($kamar->gambar) ?>" class="hover_effect h_lightbox h_blue">
-                                <img class="img-responsive" src="images/rooms/<?= esc($kamar->gambar) ?>" alt="Image">
+                            <a href="uploads/<?= esc($kamar->gambar) ?>" class="hover_effect h_lightbox h_blue">
+                                <img class="img-responsive" src="uploads/<?= esc($kamar->gambar) ?>" alt="Image">
                             </a>
                         </div>
                     </div>

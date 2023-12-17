@@ -3666,7 +3666,7 @@ footer.dark .subfooter .social_media a {
 }
 .page_title .price {
     float: right;
-    width: 70px;
+    width: 130px;
     height: 70px;
     margin-top: 10px;
     border-radius: 4px;
@@ -3676,7 +3676,7 @@ footer.dark .subfooter .social_media a {
 .page_title .price .inner {
     margin: -5px;
     background-color: #deb666;
-    width: 70px;
+    width: 130px;
     height: 70px;
     border-radius: 4px;
     font-size: 1.5em;
@@ -3688,7 +3688,7 @@ footer.dark .subfooter .social_media a {
 
 .page_title .price span {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .page_title .breadcrumb {
