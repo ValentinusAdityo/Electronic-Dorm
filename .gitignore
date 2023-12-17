@@ -49,7 +49,9 @@ Vagrantfile
 #-------------------------
 # Temporary Files
 #-------------------------
-public/uploads
+public/uploads/*
+!public/uploads/index.html
+app/Config/Boot/App.php
 
 writable/cache/*
 !writable/cache/index.html
