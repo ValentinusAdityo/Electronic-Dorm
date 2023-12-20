@@ -169,4 +169,15 @@ class Pelanggan extends Model
             }
         }
     }
+
+    public function cariPelanggan($user_name)
+    {
+        try {
+            $result = $this->db->table($this->table)->where('nama', $user_name)->get()->getResult();
+            return $result;
+        } catch (\Exception $e) {
+            // Handle any exceptions here
+            return "An error occurred: " . $e->getMessage();
+        }
+    }
 }

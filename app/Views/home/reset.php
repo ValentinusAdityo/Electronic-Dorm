@@ -9,37 +9,39 @@
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
         <div class="container">
             <div class="inner">
-                <h1>Password Reset Form</h1>
+                <h1>Reset Password</h1>
                 <ol class="breadcrumb">
-                    <li><a href="/">Beranda</a></li>
-                    <li>Password Reset</li>
+                    <li><a href="/profil">Profilku</a></li>
+                    <li>Reset Password</li>
                 </ol>
             </div>
         </div>
     </div>
 
     <!-- =========== MAIN ========== -->
-    <main id="password_reset_page">
+    <main id="booking_page">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-8">
-                    <div id="password_reset_advanced">
-
-                        <div class="main_title a_left upper">
-                            <h2>PASSWORD RESET</h2>
-                        </div>
-                        <!-- ========== PASSWORD RESET FORM ========== -->
+                    <div id="booking_advanced">
+                        <!-- ========== RESET FORM ========== -->
                         <div class="row">
-                            <form action="/password_reset" method="post">
+                            <form action="/reset/input" method="post">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input name="email" type="email" class="form-control" placeholder="Email" required>
+                                        <label>Password Baru</label>
+                                        <input name="password1" type="password" class="form-control" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Konfirmasi Password</label>
+                                        <input name="password2" type="password" class="form-control" placeholder="Password" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="submit" value="Reset Password" class="button btn_blue pull-right">
+                                    <input type="submit" value="Reset" class="button btn_blue pull-right">
                                 </div>
                             </form>
                         </div>

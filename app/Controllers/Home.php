@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\Sewa;
+use App\Models\Pelanggan;
+
 
 class Home extends BaseController
 {
@@ -55,12 +57,32 @@ class Home extends BaseController
 
     public function reset()
     {
-        $nama = $this->request->getPost('nama');
-        $no_hp = $this->request->getPost('no_hp');
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-        $alamat = $this->request->getPost('alamat');
-        $pelangganModel = (new Pelanggan($nama, $no_hp, $email, $password, $alamat))->setPenggunaData();
-        return redirect()->to('/login');
+        $session = session();
+
+        $dataModel = (new Pelanggan(null, null, null, null, null))->cariPelanggan($session->get('nama'));
+
+        $data = ['title' => 'Reset Password', 'list' => $dataModel];
+
+        if ($session->has('user')) {
+            return view('layout/header', $data) . view('layout/navbarUser') . view('home/reset') . view('layout/footer');
+        } else {
+            return view('login/login');
+        }
+    }
+
+    public function updateAkun()
+    {
+        $session = session();
+        if ($session->has('user')) {
+            $nama = $this->request->getPost('nama');
+            $alamat = $this->request->getPost('alamat');
+            $no_hp = $this->request->getPost('no_hp');
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
+
+            $updateOutput = (new Pelanggan($nama, $alamat, $no_hp, $email, $password))->updatePenggunaData($session->get('nama'));
+            return redirect()->to('/profil');
+        }
+        return view('login/login');
     }
 }

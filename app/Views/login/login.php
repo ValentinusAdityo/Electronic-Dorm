@@ -311,14 +311,14 @@
 <body>
     <main class="login">
         <div class="main-login">
-        <form action="/login/check" method="post" onsubmit="showLoading()">
+            <form action="/login/check" method="post" onsubmit="showLoading()">
                 <?= csrf_field() ?>
                 <h1>Halaman Login</h1>
                 <input class="usr put" name="usr" placeholder="Username" type="text">
                 <br>
                 <input id="pass" name="pwd" class="pss put" placeholder="Password" type="password"><button id="bhde" onclick="show()" class="shw" type="button">show</button>
                 <div id="loading" class="loading-spinner" style="display: none;"></div>
-                <a class="pass" href="">Lupa Password</a>
+                <a class="pass" href="/reset">Lupa Password</a>
                 <input value="Masuk" id="btn" class="sub" type="submit" name="submit">
                 <div class="lines">
                     <div style="background-color: #a5a5a5;" class="line"></div>
@@ -346,8 +346,13 @@
     <style>
         /* Add a rotating animation for the loading spinner */
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .button-container {
@@ -393,7 +398,7 @@
             // You can add additional logic here if needed
 
             // Hide the loading animation after a certain time (for example, 3 seconds)
-            setTimeout(function () {
+            setTimeout(function() {
                 loadingElement.style.display = "none";
             }, 3000);
 

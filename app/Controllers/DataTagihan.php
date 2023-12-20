@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\SewaModel;
+use App\Models\Sewa;
 
 class DataTagihan extends BaseController
 {
@@ -10,7 +10,7 @@ class DataTagihan extends BaseController
     public function tagihan($slug = null)
     {
         $session = session();
-        $model = model(SewaModel::class);
+        $model = model(Sewa::class);
         $data = [
             'list' => $model->getTagihan(),
             'title' => 'DreamKost - Rooms List View'
@@ -31,7 +31,7 @@ class DataTagihan extends BaseController
     public function tagihanUser($slug = null)
     {
         $session = session();
-        $model = model(SewaModel::class);
+        $model = model(Sewa::class);
 
         $data = ['title' => 'DreamKost - Booking Form'];
         $data['sewa_id'] = $model->getTagihan($slug);

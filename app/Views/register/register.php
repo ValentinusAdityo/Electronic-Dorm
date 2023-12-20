@@ -30,7 +30,7 @@
                         <div class="main_title a_left upper">
                             <h2>REGISTER</h2>
                         </div>
-                        <!-- ========== BOOKING FORM ========== -->
+                        <!-- ========== REGISTER FORM ========== -->
                         <div class="row">
                             <form action="/register/input" method="post">
                                 <div class="col-md-6">
