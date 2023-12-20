@@ -37,7 +37,7 @@ class Home extends BaseController
             return view('layout/header', $data) . view('layout/navbarGuest') . view('home/about') . view('layout/footer');
         }
     }
-    
+
     public function profil()
     {
         $session = session();
@@ -52,6 +52,15 @@ class Home extends BaseController
             return view('login/login');
         }
     }
+
+    public function reset()
+    {
+        $nama = $this->request->getPost('nama');
+        $no_hp = $this->request->getPost('no_hp');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $alamat = $this->request->getPost('alamat');
+        $pelangganModel = (new Pelanggan($nama, $no_hp, $email, $password, $alamat))->setPenggunaData();
+        return redirect()->to('/login');
+    }
 }
-
-

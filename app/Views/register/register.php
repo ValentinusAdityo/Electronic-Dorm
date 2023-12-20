@@ -12,7 +12,7 @@
             <div class="inner">
                 <h1>Register Form</h1>
                 <ol class="breadcrumb">
-                    <li><a href="styles.css">Beranda</a></li>
+                    <li><a href="/">Beranda</a></li>
                     <li>Register Form</li>
                 </ol>
             </div>
