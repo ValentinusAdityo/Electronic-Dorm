@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <style>
-        
         input {
             width: 100%;
             padding: 10px;
@@ -56,7 +55,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Nama</label>
-                                        <input class="form-control" name="nama" type="text" placeholder=<?= $session->user; ?> required>
+                                        <input class="form-control" name="user" type="text" placeholder=<?= $session->user; ?> required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">

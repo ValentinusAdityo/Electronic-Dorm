@@ -78,4 +78,30 @@ class LihatKamar extends BaseController
                 . view('layout/footer');
         }
     }
+
+    public function filterKamar(){
+        $session = session();
+        $kategori = $this->request->getGet('kategori');
+        $kamarModel = (new Kamar())->getCategory($kategori);
+
+        $data = [
+            'list' => $kamarModel,
+            'title' => 'DreamKost - Daftar Kamar'
+        ];
+        if ($session->has('admin')) {
+            helper('form');
+            return view('layout/header', $data)
+                . view('layout/navbarAdmin')
+                . view('home/roomsAdmin')
+                . view('layout/footer');
+        }
+        if ($session->has('user')) {
+            return view('layout/header', $data)
+                . view('layout/navbarUser')
+                . view('home/rooms')
+                . view('layout/footer');
+        } else {
+            return view('layout/header', $data) . view('layout/navbarGuest') . view('home/rooms') . view('layout/footer');
+        }
+    }
 }

@@ -75,16 +75,13 @@ class Home extends BaseController
         $session = session();
         if ($session->has('user')) {
             $session = session();
-            $nama = $session->get('user');
-            $alamat = $session->get('alamat');
-            $no_hp = $session->get('no_hp');
-            $email = $session->get('email');
-            $password = null;
-            if($this->request->getPost('password1') === $this->request->getPost('password2')){
-                $password = $this->request->getPost('password1');
-            }
+            $nama = $this->request->getPost('user');
+            $alamat = $this->request->getPost('alamat');
+            $no_hp = $this->request->getPost('no_hp');
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
             (new Pelanggan($nama, $no_hp, $email, $password, $alamat))->updatePenggunaData($session);
-            return redirect()->to('/profil');
+            return redirect()->to('/login');
         }
         return view('login/login');
     }
