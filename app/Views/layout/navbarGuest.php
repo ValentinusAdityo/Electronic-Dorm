@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/dreamkostlogo.png" width="70" height="50" alt="Logo">
+                    <img src="<?= base_url('images/dreamkostlogo.png')?>" width="70" height="50" alt="Logo">
                 </a>
             </div>
             <nav id="main_menu" class="mobile_menu navbar-collapse">

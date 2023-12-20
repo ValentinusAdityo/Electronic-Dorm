@@ -4,13 +4,13 @@
 <head>
     <!-- ... (elemen head lainnya) ... -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="pagination.js"></script>
+    <script src="<?= base_url('pagination.js') ?>"></script>
 </head>
 
 <body>
     <!-- =========== PAGE TITLE ========== -->
     <div class="page_title" style="background: linear-gradient(45deg, rgba(9,64,103, 1),
-                  rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
+                  rgba(9,64,103, 1)), url('<?= base_url('images/page_title_bg.jpg') ?>');">
         <div class="container">
             <div class="inner">
                 <h1>Daftar Kamar</h1>
@@ -79,7 +79,8 @@
                         <div class="col-lg-4 col-md-5 col-sm-12">
                             <figure>
                                 <a href="room.html" class="hover_effect h_link h_blue">
-                                    <img src="uploads/<?= esc($l->gambar) ?>" class="img-responsive" alt="Image">
+                                    <img src="<?= base_url('uploads/' . esc($l->gambar)) ?>" class="img-responsive"
+                                        alt="Image">
                                 </a>
                             </figure>
                         </div>

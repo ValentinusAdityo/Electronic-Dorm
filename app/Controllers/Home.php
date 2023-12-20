@@ -81,8 +81,7 @@ class Home extends BaseController
             $email = $this->request->getPost('email');
             $password = $this->request->getPost('password');
             (new Pelanggan($nama, $no_hp, $email, $password, $alamat))->updatePenggunaData($session);
-            return redirect()->to('/login');
         }
-        return view('login/login');
+        return redirect()->to('/login');
     }
 }

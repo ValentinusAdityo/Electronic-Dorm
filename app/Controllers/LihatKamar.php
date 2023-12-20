@@ -82,6 +82,9 @@ class LihatKamar extends BaseController
     public function filterKamar(){
         $session = session();
         $kategori = $this->request->getGet('kategori');
+        if($kategori =='all'){
+            return redirect()->to('/rooms');
+        }
         $kamarModel = (new Kamar())->getCategory($kategori);
 
         $data = [
@@ -90,12 +93,10 @@ class LihatKamar extends BaseController
         ];
         if ($session->has('admin')) {
             helper('form');
-            return view('layout/header', $data)
-                . view('layout/navbarAdmin')
-                . view('home/roomsAdmin')
-                . view('layout/footer');
+            return redirect()->to('/login');
         }
         if ($session->has('user')) {
+            
             return view('layout/header', $data)
                 . view('layout/navbarUser')
                 . view('home/rooms')
