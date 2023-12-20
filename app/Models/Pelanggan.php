@@ -68,9 +68,7 @@ class Pelanggan extends Model
             'created_at' => $dataCreated,
             'updated_at' => date('Y-m-d H:i:s')
         ];
-
         $validation->setRules($this->validationRules);
-
         if (!$validation->run($this->data)) {
             return $this->validation->getErrors();
         }
@@ -149,7 +147,7 @@ class Pelanggan extends Model
     {
         if ($this->validation($session->get('created_at'))) {
             try {
-                $this->db->table($this->table)->update($session->get('id'), $this->data);
+                $resultDb=$this->db->table($this->table)->where('id', $session->get('id'))->update($this->data);
                 $updatedData = $this->db->table($this->table)->where($session->get('id'))->get()->getRow();
                 return $updatedData;
             } catch (\Exception $e) {

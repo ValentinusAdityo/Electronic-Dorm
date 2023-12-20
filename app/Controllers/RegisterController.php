@@ -11,6 +11,15 @@ class RegisterController extends BaseController
 
     public function index()
     {
+        $session = session();
+        $session->remove('admin');
+        $session->remove('user');
+        $session->remove('alamat');
+        $session->remove('no_hp');
+        $session->remove('email');
+        $session->remove('created_at');
+        $session->remove('is_admin');
+        $session->destroy();
         $data = ['title' => 'DreamKost|Register'];
         return view('layout/header', $data)
             . view('layout/navbarGuest') . view('register/register') . view('layout/footer');
