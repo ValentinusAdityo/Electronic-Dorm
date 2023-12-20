@@ -20,12 +20,12 @@
                 <!-- ITEM -->
                 <article class="blog_list">
                     <figure>
-                        <a href="blog-post.html" class="hover_effect h_link h_blue">
+                        <a href="#" class="hover_effect h_link h_blue">
                             <img src="images/tampilan kost.jpeg" class="img-responsive" alt="Image">
                         </a>
                     </figure>
                     <div class="details">
-                        <h2><a href="blog-post.html">Tentang Kami </a></h2>
+                        <h2>Tentang Kami</h2>
                         <div class="info">
                             <span class="meta_part"><a href="#"><i class="fa fa-user"></i>Valentinus Adit </a></span>
                             <span class="meta_part"><a href="#"><i class="fa fa-calendar"></i>OKT 25, 2023</a></span>

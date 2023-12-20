@@ -105,7 +105,7 @@
             </table>
             <br>
             <h1>Keamanan</h1>
-            <a href="/reset">Reset Password</a>
+            <a href="/reset">Edit Akun</a>
             </tr>
             </table>
             <!-- spasi -->
