@@ -74,6 +74,6 @@ class LoginController extends BaseController
         $session->remove('is_admin');
         $session->destroy();
 
-        return view('login/login');
+        return redirect()->to('/login');
     }
 }
