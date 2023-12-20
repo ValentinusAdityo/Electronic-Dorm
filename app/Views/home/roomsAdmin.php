@@ -117,16 +117,7 @@
                                 </h3>
                                 <p>
                                     <?= esc($l->deskripsi) ?>
-                                </p>
-                                <div class="room_services">
-                                    <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover"
-                                        data-content="Free WiFi" data-original-title="WiFi"></i>
-                                    <i class="fa fa-television" data-toggle="popover" data-placement="top"
-                                        data-trigger="hover" data-content="Plasma TV with cable Channel"
-                                        data-original-title="Plasma TV"></i>
-                                    <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover"
-                                        data-content="Restaurant" data-original-title="Restaurant"></i>
-                                </div>
+                                
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-12 room_price">
                                 <div class="room_price_inner">
