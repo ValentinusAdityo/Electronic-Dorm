@@ -28,10 +28,10 @@
               rgba(9,64,103, 1)), url(images/page_title_bg.jpg);">
         <div class="container">
             <div class="inner">
-                <h1>Reset Password</h1>
+                <h1>Edit Akun</h1>
                 <ol class="breadcrumb">
                     <li><a href="/profil">Profilku</a></li>
-                    <li>Reset Password</li>
+                    <li>Edit Akun</li>
                 </ol>
             </div>
         </div>
@@ -41,7 +41,7 @@
     <main id="booking_page">
         <div class="container">
             <div class="row">
-
+                <?php $session = session() ?>
                 <div class="col-md-8">
                     <div id="booking_advanced">
                         <!-- ========== RESET FORM ========== -->
@@ -49,14 +49,32 @@
                             <form action="/reset/input" method="post">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Password Baru</label>
-                                        <input name="password1" type="password" class="form-control" placeholder="Password" required>
+                                        <label>Email</label>
+                                        <input name="email" type="email" class="form-control" placeholder=<?= $session->email; ?> required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Konfirmasi Password</label>
-                                        <input name="password2" type="password" class="form-control" placeholder="Password" required>
+                                        <label>Nama</label>
+                                        <input class="form-control" name="nama" type="text" placeholder=<?= $session->user; ?> required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Alamat</label>
+                                        <textarea class="form-control" name="alamat" placeholder=<?= $session->alamat; ?> required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>No Handphone</label>
+                                        <input name="no_hp" type="tel" class="form-control" placeholder=<?= $session->no_hp; ?> required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input name="password" type="password" class="form-control" placeholder=<?= $session->password; ?> required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
