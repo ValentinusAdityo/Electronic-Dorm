@@ -318,7 +318,6 @@
                 <br>
                 <input id="pass" name="pwd" class="pss put" placeholder="Password" type="password"><button id="bhde" onclick="show()" class="shw" type="button">show</button>
                 <div id="loading" class="loading-spinner" style="display: none;"></div>
-                <a class="pass" href="/reset">Lupa Password</a>
                 <input value="Masuk" id="btn" class="sub" type="submit" name="submit">
                 <div class="lines">
                     <div style="background-color: #a5a5a5;" class="line"></div>
