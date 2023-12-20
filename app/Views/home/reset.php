@@ -3,6 +3,25 @@
 
 <head>
     <meta charset="utf-8">
+    <style>
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 
     <!-- =========== PAGE TITLE ========== -->
     <div class="page_title" style="background: linear-gradient(45deg, rgba(9,64,103, 1),
